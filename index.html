@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RPcloud | PC-hjelp i Drammen og omegn</title>
+
+<meta name="description"
+content="PC-hjelp for privatpersoner. Hjelp med Windows, Mac, Linux, mobil, nettbrett, printer, nettverk og skylagring.">
+
+<style>
+
+:root{
+    --primary:#0056b3;
+    --secondary:#0078ff;
+    --dark:#111827;
+    --light:#f8fafc;
+    --success:#22c55e;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--light);
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+/* HEADER */
+
+.hero{
+    background:linear-gradient(135deg,#001f3f,#0056b3);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.logo{
+    max-width:450px;
+    width:100%;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    opacity:.95;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:var(--success);
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* SECTIONS */
+
+section{
+    padding:70px 0;
+}
+
+h2{
+    text-align:center;
+    color:var(--primary);
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+.card li{
+    margin-bottom:8px;
+}
+
+.price-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.price-box{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.price{
+    font-size:2.5rem;
+    color:var(--secondary);
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.contact{
+    background:white;
+    border-radius:12px;
+    padding:40px;
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.email{
+    font-size:1.2rem;
+    margin:15px 0;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.badges{
+    margin-top:25px;
+    font-size:1.1rem;
+}
+
+.badges span{
+    display:inline-block;
+    margin:8px;
+    padding:8px 16px;
+    background:rgba(255,255,255,.12);
+    border-radius:25px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2rem;
+}
+
+.logo{
+    max-width:280px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+    <!-- LEGG INN LOGO HER -->
+    <img src="rpcloud-logo.png" alt="RPcloud Logo" class="logo">
+
+    <h1>PC-hjelp for privatpersoner</h1>
+
+    <p>
+        Windows • Mac • Linux • Mobil • Nettbrett • Printer • Nettverk
+    </p>
+
+    <div class="badges">
+        <span>30+ års erfaring</span>
+        <span>Fjernhjelp</span>
+        <span>Hjemmebesøk</span>
+    </div>
+
+    <a href="mailto:service@rpcloud.no" class="btn">
+        Kontakt meg
+    </a>
+
+</header>
+
+<section>
+
+<div class="container">
+
+<h2>Om RPcloud</h2>
+
+<div class="about">
+
+<p>
+Jeg tilbyr IT-hjelp til privatpersoner i Drammen og omegn.
+Med over 30 års erfaring innen IT og 15 års erfaring som
+profesjonell konsulent kan jeg hjelpe deg med både små og store utfordringer.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Priser</h2>
+
+<div class="price-grid">
+
+<div class="price-box">
+
+<h3>Hjemmebesøk</h3>
+
+<div class="price">399 kr</div>
+
+<p>Per time</p>
+<p>Minimumspris 399 kr</p>
+<p>Drammen og omegn</p>
+
+</div>
+
+<div class="price-box">
+
+<h3>Fjernhjelp</h3>
+
+<div class="price">199 kr</div>
+
+<p>Per time</p>
+<p>Minimumspris 199 kr</p>
+<p>Quick Assist, TeamViewer eller telefon</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Tjenester</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>PC, Mac og Linux</h3>
+<ul>
+<li>Oppsett av ny PC</li>
+<li>Feilsøking</li>
+<li>Programvareinstallasjon</li>
+<li>Optimalisering</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Microsoft Office</h3>
+<ul>
+<li>Word</li>
+<li>Excel</li>
+<li>PowerPoint</li>
+<li>Outlook</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>E-post</h3>
+<ul>
+<li>Gmail</li>
+<li>Outlook</li>
+<li>Yahoo</li>
+<li>Synkronisering</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Skylagring og Backup</h3>
+<ul>
+<li>OneDrive</li>
+<li>Google Drive</li>
+<li>Dropbox</li>
+<li>Jottacloud</li>
+<li>iCloud</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Nettverk og WiFi</h3>
+<ul>
+<li>Router og modem</li>
+<li>WiFi-problemer</li>
+<li>Hjemmenettverk</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>NAS og lagring</h3>
+<ul>
+<li>Synology</li>
+<li>QNAP</li>
+<li>Backup-løsninger</li>
+<li>Fildeling</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="contact">
+
+<h2>Kontakt</h2>
+
+<p>
+Ta kontakt for en uforpliktende prat.
+</p>
+
+<div class="email">
+📧 service@rpcloud.no
+</div>
+
+<div class="email">
+</div>
+
+<a href="mailto:service@rpcloud.no" class="btn">
+Send e-post
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 RPcloud.no - IT-hjelp for privatpersoner
+</footer>
+
+</body>
+</html>
+```
