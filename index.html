@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="no">
+<head>
+
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -187,6 +189,47 @@ footer{
     max-width:280px;
 }
 
+}
+.gallery-image{
+    max-width:350px;
+    width:100%;
+    margin:10px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    cursor:pointer;
+    transition:transform .2s;
+}
+
+.gallery-image:hover{
+    transform:scale(1.03);
+}
+
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
 }
 
 </style>
@@ -412,10 +455,44 @@ Send e-post
 
 </div>
 
+<section>
+    <div class="container" style="text-align:center;">
+
+        <img src="rpcloud-add01.png"
+             alt="RPcloud IT-tjenester"
+             class="gallery-image"
+             onclick="openImage(this.src)">
+
+        <img src="rpcloud-add02.png"
+             alt="RPcloud IT-support"
+             class="gallery-image"
+             onclick="openImage(this.src)">
+
+    </div>
+</section>
 <footer>
     © 2026 RPcloud.no | IT-hjelp til privatpersoner og små bedrifter
 </footer>
-</footer>
+
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+
+    <span class="close-lightbox">&times;</span>
+
+    <img id="lightbox-image" src="" alt="">
+
+</div>
+<script>
+
+function openImage(src){
+    document.getElementById('lightbox-image').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeImage(){
+    document.getElementById('lightbox').style.display = 'none';
+}
+
+</script>
 
 </body>
 </html>
