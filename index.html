@@ -232,6 +232,42 @@ footer{
     cursor:pointer;
 }
 
+
+.social-links{
+    margin:20px 0;
+}
+
+.social-icon{
+    width:40px;
+    height:40px;
+    margin:0 10px;
+    transition:transform .2s;
+}
+
+.social-icon:hover{
+    transform:scale(1.1);
+}
+
+.top-button{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:15px;
+}
+
+.top-button:hover{
+    opacity:.9;
+}
+
+.copyright{
+    margin-top:20px;
+    font-size:.9rem;
+    opacity:.8;
+}
 </style>
 
 </head>
@@ -462,7 +498,59 @@ kan du være trygg på at du får profesjonell hjelp til både små og store utf
     </div>
 </section>
 <footer>
-    © 2026 RPcloud.no | IT-hjelp til privatpersoner og små bedrifter
+
+    <div class="container">
+
+        <p>
+            <strong>RPcloud</strong> – IT-hjelp til privatpersoner og små bedrifter
+        </p>
+
+        <p>
+            📧 <a href="mailto:service@rpcloud.no">
+                service@rpcloud.no
+            </a>
+        </p>
+
+        <p>
+            📍 Vårveien 29, 3024 Drammen
+        </p>
+
+        <p>
+            Org.nr: XXXXXXXX
+        </p>
+
+        <div class="social-links">
+
+            <a href="https://www.linkedin.com/in/rune-p-1a289059/"
+               target="_blank"
+               title="LinkedIn">
+
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+                     alt="LinkedIn"
+                     class="social-icon">
+            </a>
+
+            <a href="https://vipps.no"
+               target="_blank"
+               title="Vipps">
+
+                <img src="vipps-logo.png"
+                     alt="Vipps"
+                     class="social-icon">
+            </a>
+
+        </div>
+
+        <button onclick="scrollToTop()" class="top-button">
+            ↑ Til toppen
+        </button>
+
+        <p class="copyright">
+            © 2026 RPcloud. Alle rettigheter reservert.
+        </p>
+
+    </div>
+
 </footer>
 
 <div id="lightbox" class="lightbox" onclick="closeImage()">
@@ -481,6 +569,16 @@ function openImage(src){
 
 function closeImage(){
     document.getElementById('lightbox').style.display = 'none';
+}
+
+</script>
+<script>
+
+function scrollToTop(){
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
 }
 
 </script>
