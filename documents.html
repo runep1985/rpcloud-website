@@ -18,7 +18,7 @@ body{
 
 header{
     background:#1e293b;
-    padding:40px;
+    padding:50px 20px;
     text-align:center;
 }
 
@@ -26,27 +26,31 @@ h1{
     margin:0;
 }
 
+.subtitle{
+    color:#94a3b8;
+}
+
 .container{
     max-width:1200px;
     margin:auto;
-    padding:20px;
+    padding:30px;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:20px;
 }
 
 .card{
     background:#1e293b;
-    padding:20px;
+    padding:25px;
     border-radius:10px;
 }
 
 .card h2{
-    margin-top:0;
     color:#60a5fa;
+    margin-top:0;
 }
 
 .card ul{
@@ -55,7 +59,7 @@ h1{
 }
 
 .card li{
-    margin:10px 0;
+    margin:12px 0;
 }
 
 .card a{
@@ -69,12 +73,16 @@ h1{
 
 .btn{
     display:inline-block;
+    padding:12px 20px;
+    margin-top:15px;
     background:#2563eb;
     color:white;
-    padding:10px 20px;
-    border-radius:8px;
     text-decoration:none;
-    margin-top:20px;
+    border-radius:8px;
+}
+
+.btn:hover{
+    background:#1d4ed8;
 }
 
 footer{
@@ -93,7 +101,7 @@ footer{
 
 <h1>Dokumentarkiv</h1>
 
-<p>
+<p class="subtitle">
 Attester, sertifikater, kursbevis og vitnemål
 </p>
 
@@ -112,17 +120,11 @@ Attester, sertifikater, kursbevis og vitnemål
 <h2>📄 Attester</h2>
 
 <ul>
-
-<li><a href="assets/docs/attester/attest-advania.pdf" target="_blank">Advania</a></li>
-
-<li><a href="assets/docs/attester/attest-atea.pdf" target="_blank">Atea</a></li>
-
-<li><a href="assets/docs/attester/attest-evry.pdf" target="_blank">EVRY</a></li>
-
-<li><a href="assets/docs/attester/attest-nif.pdf" target="_blank">Norges Idrettsforbund</a></li>
-
-<li><a href="assets/docs/attester/attest-securitas.pdf" target="_blank">Securitas</a></li>
-
+<li><a href="assets/docs/attester/attest-advania.pdf" target="_blank">Attest - Advania</a></li>
+<li><a href="assets/docs/attester/attest-atea.pdf" target="_blank">Attest - Atea</a></li>
+<li><a href="assets/docs/attester/attest-evry.pdf" target="_blank">Attest - EVRY</a></li>
+<li><a href="assets/docs/attester/attest-nif.pdf" target="_blank">Attest - Norges Idrettsforbund</a></li>
+<li><a href="assets/docs/attester/attest-securitas.pdf" target="_blank">Attest - Securitas</a></li>
 </ul>
 
 </div>
@@ -132,10 +134,7 @@ Attester, sertifikater, kursbevis og vitnemål
 <h2>🏅 Sertifikater</h2>
 
 <ul>
-
-<li><a href="assets/docs/sertifikater/ms900.pdf" target="_blank">Microsoft MS-900 Fundamentals</a></li>
-
-
+<li><a href="assets/docs/sertifikater/ms900.pdf" target="_blank">MS-900 Microsoft 365 Fundamentals</a></li>
 </ul>
 
 </div>
@@ -145,25 +144,14 @@ Attester, sertifikater, kursbevis og vitnemål
 <h2>🎓 Kursbevis</h2>
 
 <ul>
-
-<li><a href="assets/docs/o365" target="_blank">Microsoft 365 Superbruker</a></li>
-
-<li><a href="assets/docs/ms900" target="_blank">MS-900 Kurs (Udemy)</a></li>
-
-<li><a href="assets/docs/sertifikater/az900.pdf" target="_blank">AZ-900 Kurs (Udemy)</a></li>
-
-<li><a href="assets/docs/sertifikater/newpartner.pdf" target="_blank">Delta New Partner</a></li>
-
-<li><a href="assets/docs/sertifikater/deltaadvanced.pdf" target="_blank">Delta Advanced</a></li>
-
-<li><a href="assets/docs/sertifikater/vesdaE.pdf" target="_blank">Xtralis Vesda</a></li>
-
-<li><a href="assets/docs/sertifikater/Morley.pdf" target="_blank">Morley IAS Max Basic</a></li>
-
-<li><a href="assets/docs/sertifikater/flexess.pdf" target="_blank">FlexES Basic</a></li>
-
-<li><a href="assets/docs/kursbevis/hms.pdf" target="_blank">Securitas HMS Kurs</a></li>
-
+<li><a href="assets/docs/kursbevis/ms900.pdf" target="_blank">Microsoft MS-900 (Udemy)</a></li>
+<li><a href="assets/docs/kursbevis/az900.pdf" target="_blank">Microsoft AZ-900 (Udemy)</a></li>
+<li><a href="assets/docs/kursbevis/O365.pdf" target="_blank">Microsoft 365 Superbruker</a></li>
+<li><a href="assets/docs/kursbevis/hms.pdf" target="_blank">HMS Kurs (Advania)</a></li>
+<li><a href="assets/docs/kursbevis/newpartner.pdf" target="_blank">Delta Firesystems New Partner (Honeywell)</a></li>
+<li><a href="assets/docs/kursbevis/deltaadvanced.pdf" target="_blank">Delta Firesystems Advanced (Honeywell)</a></li>
+<li><a href="assets/docs/kursbevis/flexess.pdf" target="_blank">Esser Flexes Control (Honeywell)</a></li>
+<li><a href="assets/docs/kursbevis/moreley.pdf" target="_blank">Morley Training (Honeywell)</a></li>
 </ul>
 
 </div>
@@ -173,11 +161,8 @@ Attester, sertifikater, kursbevis og vitnemål
 <h2>📚 Vitnemål</h2>
 
 <ul>
-
-<li><a href="assets/docs/vitnemal/vitnemal.pdf" target="_blank">Vitnemål (Imente fagskole)</a></li>
-
-<li><a href="assets/docs/vitnemal/karakterutskrift.pdf" target="_blank">Karakterutskrift (Imente fagskole)</a></li>
-
+<li><a href="assets/docs/vitnemal/vitnemal.pdf" target="_blank">Vitnemål</a></li>
+<li><a href="assets/docs/vitnemal/karakterutskrift.pdf" target="_blank">Karakterutskrift</a></li>
 </ul>
 
 </div>
