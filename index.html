@@ -622,24 +622,13 @@ kan du være trygg på at du får profesjonell hjelp til både små og store utf
 </footer>
 
 <div id="lightbox" class="lightbox" onclick="closeImage()">
+    <script src="js/lightbox.js"></script>
 
     <span class="close-lightbox">&times;</span>
 
     <img id="lightbox-image" src="" alt="">
 
 </div>
-<script>
-
-function openImage(src){
-    document.getElementById('lightbox-image').src = src;
-    document.getElementById('lightbox').style.display = 'flex';
-}
-
-function closeImage(){
-    document.getElementById('lightbox').style.display = 'none';
-}
-
-</script>
 
 <button id="contactBtn" class="floating-contact">
     💬 Kontakt meg
