@@ -628,18 +628,9 @@ kan du være trygg på at du får profesjonell hjelp til både små og store utf
     <img id="lightbox-image" src="" alt="">
 
 </div>
-<script>
 
-function openImage(src){
-    document.getElementById('lightbox-image').src = src;
-    document.getElementById('lightbox').style.display = 'flex';
-}
-
-function closeImage(){
-    document.getElementById('lightbox').style.display = 'none';
-}
-
-</script>
+<script src="assets/js/lightbox.js"></script>
+<script src="assets/js/scrolltotop.js"></script>
 
 <button id="contactBtn" class="floating-contact">
     💬 Kontakt meg
@@ -692,16 +683,6 @@ function closeImage(){
     </div>
 
 </div>
-<script>
-
-function scrollToTop(){
-    window.scrollTo({
-        top:0,
-        behavior:'smooth'
-    });
-}
-
-</script>
 <script>
 
 const btn = document.getElementById("contactBtn");
