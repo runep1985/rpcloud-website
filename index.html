@@ -4,22 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RPcloud | IT-hjelp for privatpersoner og små bedrifter</title>
+<title>RPcloud | IT-hjelp Drammen og omegn</title>
 
-<meta name="description" content="IT-hjelp i Drammen og omegn. PC, Mac, nettverk, Office 365, skylagring og backup.">
+<meta name="description" content="IT-hjelp i Drammen og omegn. PC, Mac, mobil, nettverk, Office 365, skylagring og backup.">
 
 <link rel="icon" href="favicon.png">
 
 <style>
-/* =========================
-   BASE + THEME
-========================= */
-
 :root{
     --bg:#f8fafc;
     --text:#1f2937;
     --primary:#0056b3;
-    --secondary:#007bff;
     --success:#22c55e;
 
     --card:rgba(255,255,255,0.65);
@@ -50,10 +45,7 @@ body{
     margin:auto;
 }
 
-/* =========================
-   GLASS NAVBAR
-========================= */
-
+/* NAV */
 .glass-nav{
     position:fixed;
     top:0;
@@ -69,7 +61,6 @@ body{
 
 body.dark .glass-nav{
     background:rgba(15,23,42,0.6);
-    border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .nav-inner{
@@ -82,10 +73,6 @@ body.dark .glass-nav{
     padding:0 20px;
 }
 
-.logo-small{
-    font-weight:700;
-}
-
 nav a{
     margin-left:15px;
     text-decoration:none;
@@ -93,49 +80,18 @@ nav a{
     opacity:0.8;
 }
 
-nav a:hover{
-    opacity:1;
-}
-
 body{ padding-top:64px; }
 
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero{
     background:linear-gradient(135deg,#001f3f,#0056b3);
     color:white;
     text-align:center;
     padding:80px 20px;
-    position:relative;
-    overflow:hidden;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.25);
-}
-
-.hero > *{
-    position:relative;
-    z-index:2;
-}
-
-.logo{
-    max-width:420px;
-    width:100%;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
-section{
-    padding:70px 0;
-}
+/* SECTIONS */
+section{ padding:70px 0; }
 
 h2{
     text-align:center;
@@ -143,123 +99,62 @@ h2{
     margin-bottom:40px;
 }
 
-.about{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-}
-
-/* =========================
-   GLASS CARDS
-========================= */
-
-.price-grid,
-.cards{
+/* GLASS CARDS */
+.cards,
+.price-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:20px;
 }
 
-.price-box,
 .card,
+.price-box,
 .contact{
     background:var(--card);
     backdrop-filter:blur(14px);
     border:1px solid var(--border);
-    box-shadow:var(--shadow);
     border-radius:12px;
     padding:25px;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
+/* BUTTONS */
 .btn{
     background:var(--success);
     color:white;
     border:none;
-    padding:12px 22px;
+    padding:12px 20px;
     border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
 }
 
-/* =========================
-   FLOATING CONTACT
-========================= */
-
+/* FLOATING */
 .floating-contact{
     position:fixed;
     right:20px;
     bottom:20px;
     background:var(--success);
     color:white;
-    padding:14px 20px;
+    padding:14px 18px;
     border-radius:999px;
     border:none;
     cursor:pointer;
-    z-index:9999;
 }
 
-/* =========================
-   LIGHTBOX
-========================= */
-
-.lightbox{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.85);
-    justify-content:center;
-    align-items:center;
-    z-index:10000;
-}
-
-.lightbox img{
-    max-width:90%;
-    max-height:90%;
-}
-
-/* =========================
-   DARK MODE BUTTON
-========================= */
-
-.theme-toggle{
-    position:fixed;
-    top:18px;
-    right:18px;
-    z-index:10000;
-
-    background:rgba(255,255,255,0.2);
-    border:1px solid rgba(255,255,255,0.3);
-    color:white;
-    padding:10px 14px;
-    border-radius:999px;
-    cursor:pointer;
-    backdrop-filter:blur(10px);
-}
-
-/* =========================
-   CHAT WIDGET
-========================= */
-
+/* CHAT */
 #aiChatBtn{
     position:fixed;
-    bottom:20px;
     left:20px;
+    bottom:20px;
     background:#0056b3;
     color:white;
     padding:14px 18px;
     border-radius:999px;
     cursor:pointer;
-    z-index:9999;
 }
 
 #aiChatBox{
     position:fixed;
-    bottom:80px;
     left:20px;
+    bottom:80px;
     width:320px;
     height:420px;
 
@@ -270,81 +165,69 @@ h2{
 
     display:none;
     flex-direction:column;
-    overflow:hidden;
-    z-index:9999;
 }
 
 .chat-header{
     padding:10px;
-    background:rgba(0,0,0,0.1);
     display:flex;
     justify-content:space-between;
+    background:rgba(0,0,0,0.08);
 }
 
 #chatMessages{
     flex:1;
     padding:10px;
     overflow:auto;
-    font-size:14px;
 }
 
 .chat-input{
     display:flex;
-    border-top:1px solid rgba(0,0,0,0.1);
 }
 
 .chat-input input{
     flex:1;
     padding:10px;
     border:none;
-    outline:none;
     background:transparent;
-    color:inherit;
 }
 
 .chat-input button{
     background:var(--success);
     border:none;
     color:white;
-    padding:10px 14px;
-    cursor:pointer;
+    padding:10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="glass-nav">
-    <div class="nav-inner">
-        <div class="logo-small">RPcloud</div>
-        <nav>
-            <a href="#tjenester">Tjenester</a>
-            <a href="#priser">Priser</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-    </div>
+<div class="nav-inner">
+    <div><b>RPcloud</b></div>
+    <nav>
+        <a href="#tjenester">Tjenester</a>
+        <a href="#priser">Priser</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</div>
 </header>
 
-<!-- DARK MODE -->
-<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-
-<!-- HERO -->
 <header class="hero">
-    <img src="RPcloud_Blue_Trans.png" class="logo">
-    <h1>IT-hjelp for privatpersoner og små bedrifter</h1>
-    <p>Rask, trygg og personlig IT-support</p>
+<h1>IT-hjelp for privatpersoner og små bedrifter</h1>
+<p>Rask og profesjonell IT-support i Drammen og omegn</p>
 </header>
 
-<!-- ABOUT -->
 <section>
-<div class="container about">
+<div class="container">
 <h2>Velkommen til RPcloud</h2>
-<p>Hjelp med PC, Mac, nettverk, mobil og skyløsninger.</p>
+
+<p style="text-align:center;max-width:800px;margin:auto;">
+Hjelp med PC, Mac, mobil, nettverk, skrivere, Office 365, skylagring og backup.
+</p>
 </div>
 </section>
 
-<!-- PRISER -->
 <section id="priser">
 <div class="container">
 <h2>Priser</h2>
@@ -352,49 +235,71 @@ h2{
 <div class="price-grid">
 <div class="price-box">
 <h3>Fjernsupport</h3>
-<p><strong>kr 199,-</strong> per time</p>
+<p><b>kr 199,-</b> per time</p>
 </div>
 
 <div class="price-box">
 <h3>Hjemmebesøk</h3>
-<p><strong>kr 399,-</strong> per time</p>
+<p><b>kr 399,-</b> per time</p>
 </div>
 </div>
 
 </div>
 </section>
 
-<!-- TJENESTER -->
 <section id="tjenester">
 <div class="container">
 <h2>Tjenester</h2>
 
 <div class="cards">
-<div class="card"><h3>PC & Mac</h3></div>
-<div class="card"><h3>Office 365</h3></div>
-<div class="card"><h3>Nettverk</h3></div>
-<div class="card"><h3>Backup</h3></div>
+
+<div class="card">
+<h3>PC, Mac og mobil</h3>
+<p>Windows, macOS, Linux, mobil, feilsøking og oppsett.</p>
+</div>
+
+<div class="card">
+<h3>Microsoft 365</h3>
+<p>Word, Excel, Outlook, Teams, OneDrive og SharePoint.</p>
+</div>
+
+<div class="card">
+<h3>Skylagring & backup</h3>
+<p>OneDrive, Google Drive, Dropbox, iCloud og Jottacloud.</p>
+</div>
+
+<div class="card">
+<h3>Nettverk</h3>
+<p>WiFi, router, modem, DNS og sikkerhet.</p>
+</div>
+
+<div class="card">
+<h3>Skrivere</h3>
+<p>Installasjon, feilsøking og trådløs utskrift.</p>
+</div>
+
+<div class="card">
+<h3>Avanserte løsninger</h3>
+<p>NAS, domener, e-post og 2FA.</p>
+</div>
+
 </div>
 </div>
 </section>
 
-<!-- KONTAKT -->
 <section id="kontakt">
-<div class="container contact">
+<div class="container contact" style="text-align:center;">
 <h2>Kontakt</h2>
-<p>service@rpcloud.no</p>
+
+<p><b>Email:</b> service@rpcloud.no</p>
+<p><b>Adresse:</b> Vårveien 29a, 3024 Drammen</p>
+<p><b>Org.nr:</b> (legg inn senere)</p>
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer style="text-align:center;padding:30px;">
 © 2026 RPcloud
 </footer>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeImage()">
-<img id="lightboxImg">
-</div>
 
 <!-- CHAT -->
 <div id="aiChatBtn">💬 AI</div>
@@ -413,19 +318,7 @@ RPcloud AI
 </div>
 </div>
 
-<!-- JS -->
 <script>
-function toggleTheme(){
-    document.body.classList.toggle("dark");
-    localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light");
-}
-
-(function(){
-    if(localStorage.getItem("theme")==="dark"){
-        document.body.classList.add("dark");
-    }
-})();
-
 function toggleChat(){
     const box=document.getElementById("aiChatBox");
     box.style.display=box.style.display==="flex"?"none":"flex";
@@ -434,9 +327,9 @@ function toggleChat(){
 document.getElementById("aiChatBtn").onclick=toggleChat;
 
 function addMessage(t,f){
-    const div=document.createElement("div");
-    div.innerHTML="<b>"+f+":</b> "+t;
-    document.getElementById("chatMessages").appendChild(div);
+    const d=document.createElement("div");
+    d.innerHTML="<b>"+f+":</b> "+t;
+    document.getElementById("chatMessages").appendChild(d);
 }
 
 function sendMessage(){
@@ -445,23 +338,17 @@ function sendMessage(){
 
     addMessage(i.value,"Du");
 
-    let r="Jeg kan hjelpe deg med det.";
+    let r="Jeg kan hjelpe deg med IT-support.";
 
-    if(i.value.toLowerCase().includes("pris")) r="Pris starter på 199 kr.";
-    if(i.value.toLowerCase().includes("hjelp")) r="Jeg hjelper med PC, Mac og nettverk.";
+    if(i.value.toLowerCase().includes("pris"))
+        r="Fjernsupport fra 199 kr, hjemmebesøk fra 399 kr.";
 
-    setTimeout(()=>addMessage(r,"AI"),300);
+    if(i.value.toLowerCase().includes("hjelp"))
+        r="Vi hjelper med PC, Mac, nettverk og Office 365.";
+
+    setTimeout(()=>addMessage(r,"RPcloud AI"),300);
 
     i.value="";
-}
-
-function openImage(src){
-    document.getElementById("lightboxImg").src=src;
-    document.getElementById("lightbox").style.display="flex";
-}
-
-function closeImage(){
-    document.getElementById("lightbox").style.display="none";
 }
 </script>
 
