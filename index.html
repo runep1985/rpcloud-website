@@ -1,307 +1,326 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RPcloud | IT-hjelp for privatpersoner og små bedrifter</title>
-
-<meta name="description" content="IT-hjelp i Drammen og omegn. Hjelp med PC, Mac, mobil, nettverk, skrivere, Office 365, skylagring og backup.">
-<meta name="keywords" content="PC hjelp Drammen, IT hjelp, Windows, Mac, Linux, Office 365, OneDrive, printer, nettverk">
+<title>RPcloud | IT-hjelp</title>
 
 <style>
+
+/* =========================
+   APPLE GLASS SYSTEM
+========================= */
+
 :root{
-    --primary:#0056b3;
-    --secondary:#007bff;
-    --dark:#0f172a;
-    --success:#22c55e;
-    --bg: #f8fafc;
-    --text:#1f2937;
-    --glass: rgba(255,255,255,0.18);
-    --border: rgba(255,255,255,0.25);
+    --glass: rgba(255,255,255,0.55);
+    --glass-strong: rgba(255,255,255,0.75);
+    --border: rgba(255,255,255,0.35);
+    --text:#0f172a;
+    --accent:#007aff;
 }
 
 body.dark{
-    --bg:#0b1220;
-    --text:#e5e7eb;
-    --glass: rgba(15,23,42,0.35);
+    --glass: rgba(15,23,42,0.55);
+    --glass-strong: rgba(15,23,42,0.75);
     --border: rgba(255,255,255,0.08);
+    --text:#e5e7eb;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-
+/* BACKGROUND (Apple-style gradient) */
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    background:var(--bg);
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
     color:var(--text);
-    line-height:1.6;
-    padding-top:70px;
-    transition:0.3s ease;
+    background:
+        radial-gradient(circle at 20% 20%, #4facfe55, transparent 40%),
+        radial-gradient(circle at 80% 10%, #00f2fe33, transparent 40%),
+        radial-gradient(circle at 50% 90%, #a6ffcb33, transparent 40%),
+        #f5f7fb;
+    overflow-x:hidden;
 }
 
-/* GLASS NAV */
-.glass-nav{
+/* subtle noise overlay (Apple feel) */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity:0.04;
+    pointer-events:none;
+}
+
+/* =========================
+   GLASS NAV
+========================= */
+
+nav{
     position:fixed;
     top:0;
-    left:0;
     width:100%;
     z-index:9999;
-    background:var(--glass);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid var(--border);
+    transition:.3s;
 }
 
 .nav-inner{
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
-    padding:14px 20px;
+    margin-top:12px;
+    padding:12px 18px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
+    background:var(--glass);
+    backdrop-filter: blur(24px) saturate(180%);
+    border:1px solid var(--border);
+    border-radius:16px;
+
+    transition:.3s;
+}
+
+.nav-inner.scrolled{
+    background:var(--glass-strong);
+    transform: translateY(-2px);
 }
 
 nav a{
     margin-left:18px;
     text-decoration:none;
     color:inherit;
-    opacity:0.8;
+    opacity:.75;
 }
 
-nav a:hover{opacity:1;}
+nav a:hover{opacity:1}
 
-.logo-small{font-weight:700;}
-
-/* HERO */
-.hero{
-    background:linear-gradient(135deg,#001f3f,#0056b3);
-    color:white;
-    text-align:center;
-    padding:70px 20px;
-}
-
-.hero h1{font-size:3rem;margin-bottom:15px;}
-.hero p{font-size:1.2rem;}
-
-.badges span{
-    display:inline-block;
-    background:rgba(255,255,255,0.15);
-    padding:10px 18px;
-    margin:5px;
-    border-radius:25px;
-}
-
-/* GLASS CARDS */
-.price-box,.card,.popup-content{
-    background:var(--glass);
-    backdrop-filter:blur(22px);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:25px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.12);
-}
+/* =========================
+   LAYOUT
+========================= */
 
 .container{
-    width:90%;
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
+    padding:40px 20px;
 }
 
-section{padding:70px 0;}
+section{
+    padding:60px 0;
+}
+
+/* =========================
+   HERO (Apple-style)
+========================= */
+
+.hero{
+    text-align:center;
+    padding:140px 20px 80px;
+}
+
+.hero h1{
+    font-size:3rem;
+    letter-spacing:-1px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    opacity:.75;
+    font-size:1.2rem;
+}
+
+/* =========================
+   GLASS CARDS (floating)
+========================= */
+
+.card, .price-box, .contact{
+    background:var(--glass);
+    backdrop-filter: blur(24px) saturate(180%);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:24px;
+    transition:.3s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card:hover, .price-box:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+/* grids */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+/* =========================
+   BUTTON (Apple style)
+========================= */
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 20px;
+    border-radius:999px;
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark{
+    background:
+        radial-gradient(circle at 20% 20%, #1e3a8a55, transparent 40%),
+        radial-gradient(circle at 80% 10%, #0ea5e933, transparent 40%),
+        radial-gradient(circle at 50% 90%, #22c55e22, transparent 40%),
+        #0b1220;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
 
 h2{
+    font-size:2rem;
     text-align:center;
-    margin-bottom:40px;
-    color:var(--primary);
+    margin-bottom:30px;
+    letter-spacing:-0.5px;
 }
 
-/* GRID */
-.price-grid,.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
+/* =========================
+   CONTACT FLOAT BUTTON
+========================= */
 
-.price{
-    font-size:2.5rem;
-    color:var(--secondary);
-}
-
-/* CONTACT BUTTON */
-.floating-contact{
+.fab{
     position:fixed;
-    bottom:20px;
     right:20px;
-    background:var(--success);
-    color:white;
-    padding:15px 25px;
-    border:none;
-    border-radius:50px;
-    cursor:pointer;
-    z-index:9999;
-}
-
-/* POPUP */
-.popup{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.6);
-}
-
-.popup-content{
-    width:90%;
-    max-width:500px;
-    margin:100px auto;
-}
-
-.popup input,.popup textarea{
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border-radius:8px;
-    border:1px solid #ddd;
-}
-
-/* THEME BUTTON */
-.theme-toggle{
-    position:fixed;
-    top:15px;
-    right:15px;
-    z-index:99999;
-    padding:10px 14px;
+    bottom:20px;
+    background:var(--glass-strong);
+    border:1px solid var(--border);
+    padding:14px 18px;
     border-radius:999px;
-    border:none;
+    backdrop-filter: blur(20px);
     cursor:pointer;
-    background:rgba(255,255,255,0.2);
-    color:white;
 }
-</style>
 
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floatIn{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+.card, .price-box{
+    animation:floatIn .6s ease;
+}
+
+</style>
 </head>
 
 <body>
 
 <!-- NAV -->
-<header class="glass-nav">
-    <div class="nav-inner">
-        <div class="logo-small">RPcloud</div>
-        <nav>
-            <a href="#tjenester">Tjenester</a>
-            <a href="#priser">Priser</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
+<nav>
+<div class="nav-inner" id="nav">
+    <div><b>RPcloud</b></div>
+    <div>
+        <a href="#tjenester">Tjenester</a>
+        <a href="#priser">Priser</a>
+        <a href="#kontakt">Kontakt</a>
     </div>
-</header>
-
-<button class="theme-toggle" onclick="toggleTheme()">🌙 Dark mode</button>
+</div>
+</nav>
 
 <!-- HERO -->
-<header class="hero">
-    <h1>IT-hjelp for privatpersoner og små bedrifter</h1>
-    <p>Profesjonell IT-hjelp hjemme hos deg eller via fjernsupport.</p>
-
-    <div class="badges">
-        <span>Windows</span><span>Mac</span><span>Linux</span>
-        <span>Mobil</span><span>Nettverk</span><span>Cloud</span>
-    </div>
-</header>
+<div class="hero">
+    <h1>IT-hjelp som føles premium</h1>
+    <p>Apple-style glass design • rask IT-support • Drammen</p>
+</div>
 
 <!-- ABOUT -->
-<section>
 <div class="container">
-<h2>Velkommen til RPcloud</h2>
+<section>
+<h2>Velkommen</h2>
 <div class="card">
-<p>
-Rask og personlig IT-hjelp for PC, Mac, mobil, nettverk og skyløsninger.
-</p>
-</div>
+RPcloud gir profesjonell IT-hjelp med fokus på enkelhet, trygghet og rask løsning.
 </div>
 </section>
 
 <!-- PRICES -->
 <section id="priser">
-<div class="container">
 <h2>Priser</h2>
 
-<div class="price-grid">
+<div class="grid">
 <div class="price-box">
 <h3>Fjernsupport</h3>
-<div class="price">kr 199,-</div>
-<p>Per time</p>
+<p><b>199 kr/t</b></p>
 </div>
 
 <div class="price-box">
 <h3>Hjemmebesøk</h3>
-<div class="price">kr 399,-</div>
-<p>Per time</p>
+<p><b>399 kr/t</b></p>
 </div>
 </div>
 
-</div>
 </section>
 
 <!-- SERVICES -->
 <section id="tjenester">
-<div class="container">
 <h2>Tjenester</h2>
 
-<div class="cards">
-<div class="card"><h3>PC & Mac</h3></div>
-<div class="card"><h3>Office 365</h3></div>
-<div class="card"><h3>Backup</h3></div>
-<div class="card"><h3>Nettverk</h3></div>
+<div class="grid">
+<div class="card">PC & Mac support</div>
+<div class="card">Office 365</div>
+<div class="card">Nettverk & WiFi</div>
+<div class="card">Backup & skylagring</div>
 </div>
 
-</div>
 </section>
 
 <!-- CONTACT -->
 <section id="kontakt">
-<div class="container">
 <h2>Kontakt</h2>
 
-<div class="card">
-<p>📧 service@rpcloud.no</p>
-<p>📍 Drammen og omegn</p>
-</div>
-
+<div class="contact">
+📧 service@rpcloud.no<br>
+📍 Drammen
 </div>
 </section>
-
-<!-- FOOTER -->
-<footer style="text-align:center;padding:30px;">
-© 2026 RPcloud
-</footer>
-
-<!-- CONTACT POPUP -->
-<button class="floating-contact" onclick="openPopup()">Kontakt</button>
-
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <h2>Kontakt</h2>
-        <input placeholder="Navn">
-        <input placeholder="E-post">
-        <textarea placeholder="Melding"></textarea>
-        <button onclick="closePopup()">Send</button>
-    </div>
 </div>
 
+<!-- FLOAT BUTTON -->
+<div class="fab" onclick="toggleTheme()">🌙 Dark</div>
+
 <script>
+
+/* dark mode */
 function toggleTheme(){
     document.body.classList.toggle("dark");
 }
 
-function openPopup(){
-    document.getElementById("popup").style.display="block";
-}
+/* navbar blur effect */
+const nav = document.getElementById("nav");
 
-function closePopup(){
-    document.getElementById("popup").style.display="none";
-}
+window.addEventListener("scroll",()=>{
+    if(window.scrollY > 10){
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
+});
+
 </script>
 
 </body>
