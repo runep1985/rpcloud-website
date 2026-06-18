@@ -1,100 +1,64 @@
+body {
+    background: #0f172a;
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Better spacing consistency */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Card system consistency */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Job spacing consistency */
+.job {
+    margin-bottom: 18px;
+}
+
+/* Buttons fix */
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Profile image slightly refined */
 .profile-image {
     width: 220px;
     height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #2563eb;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: 4px solid #2563eb;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
     display: block;
     margin: 0 auto 25px auto;
 }
-.hero-buttons {
-margin-top: 25px;
-}
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #0f172a;
-        color: #f8fafc;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-    }
-
-    header {
-        background: #1e293b;
-        padding: 60px 20px;
-        text-align: center;
-    }
-
-    h1 {
-        margin: 0;
-        font-size: 3rem;
-    }
-
-    h2 {
-        color: #60a5fa;
-        margin-top: 40px;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-        color: #94a3b8;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-    }
-
-    .card {
-        background: #1e293b;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 10px;
-    }
-
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .skill {
-        background: #2563eb;
-        padding: 8px 14px;
-        border-radius: 20px;
-    }
-
-    .job {
-        border-left: 4px solid #2563eb;
-        padding-left: 15px;
-        margin-bottom: 20px;
-    }
-
-    a {
-        color: #60a5fa;
-        text-decoration: none;
-    }
-
-    .documents {
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-        gap: 20px;
-    }
-
-    .doc-card {
-        background: #1e293b;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    footer {
-        margin-top: 50px;
-        text-align: center;
-        padding: 30px;
-        color: #94a3b8;
-    }
-</style>
