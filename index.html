@@ -716,7 +716,6 @@ function scrollToTop(){
 document.getElementById("darkModeToggle").addEventListener("click", function(){
     document.body.classList.toggle("dark-mode");
 });
-</script>
 
 const btn = document.getElementById("contactBtn");
 const popup = document.getElementById("contactPopup");
@@ -739,7 +738,6 @@ window.onclick = (e) => {
 const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", async function(e){
-
     e.preventDefault();
 
     const response = await fetch(form.action,{
@@ -751,26 +749,11 @@ form.addEventListener("submit", async function(e){
     });
 
     if(response.ok){
-
         form.reset();
-
         form.style.display = "none";
-
-        document.getElementById("successMessage")
-                .style.display = "block";
-
+        document.getElementById("successMessage").style.display = "block";
     }else{
-
         alert("Kunne ikke sende meldingen. Prøv igjen senere.");
-
     }
-
 });
-
 </script>
-
-</body>
-</html>
-
-</body>
-</html>
