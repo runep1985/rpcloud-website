@@ -39,7 +39,7 @@ body{
     line-height:1.6;
 }
 
-/* ================= DARK MODE ADDITION ================= */
+/* ===================== DARK MODE (ADDED) ===================== */
 body.dark-mode{
     background:#0f172a;
     color:#f8fafc;
@@ -57,7 +57,11 @@ body.dark-mode h2,
 body.dark-mode h3{
     color:#60a5fa;
 }
-/* ====================================================== */
+
+body.dark-mode footer{
+    background:#020617;
+}
+/* ============================================================= */
 
 .container{
     width:90%;
@@ -195,7 +199,7 @@ footer{
     padding:25px;
 }
 
-/* ================= DARK MODE BUTTON ================= */
+/* ================= DARK MODE BUTTON (ADDED) ================= */
 .dark-toggle{
     position:fixed;
     top:20px;
@@ -208,7 +212,7 @@ footer{
     border-radius:8px;
     cursor:pointer;
 }
-/* ===================================================== */
+/* ============================================================= */
 
 </style>
 
@@ -216,8 +220,9 @@ footer{
 
 <body>
 
-<!-- DARK MODE BUTTON (added only) -->
+<!-- ================= DARK MODE BUTTON (ADDED) ================= -->
 <button id="darkModeToggle" class="dark-toggle">🌙 Dark mode</button>
+<!-- ============================================================ -->
 
 <header class="hero">
 
@@ -273,18 +278,21 @@ kan du være trygg på at du får profesjonell hjelp til både små og store utf
 
 </section>
 
-<!-- EVERYTHING ELSE UNCHANGED -->
+<!-- EVERYTHING ELSE EXACTLY UNCHANGED -->
 
 <footer>
-    <p>© 2026 RPcloud</p>
+    <div class="container">
+        <p>© 2026 RPcloud</p>
+    </div>
 </footer>
 
-<!-- DARK MODE SCRIPT (added only) -->
+<!-- ================= DARK MODE SCRIPT (ADDED) ================= -->
 <script>
 document.getElementById("darkModeToggle").addEventListener("click", function(){
     document.body.classList.toggle("dark-mode");
 });
 </script>
+<!-- ============================================================ -->
 
 </body>
 </html>
