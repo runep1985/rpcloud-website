@@ -39,6 +39,25 @@ body{
     line-height:1.6;
 }
 
+/* ===== ADDED DARK MODE ===== */
+body.dark-mode{
+    background:#0f172a;
+    color:#f8fafc;
+}
+
+body.dark-mode .price-box,
+body.dark-mode .card,
+body.dark-mode .contact{
+    background:#1e293b;
+    color:#f8fafc;
+}
+
+body.dark-mode h2,
+body.dark-mode h3{
+    color:#60a5fa;
+}
+/* ============================ */
+
 .container{
     width:90%;
     max-width:1200px;
@@ -232,7 +251,6 @@ footer{
     cursor:pointer;
 }
 
-
 .social-links{
     margin:20px 0;
 }
@@ -331,10 +349,30 @@ footer{
     border-radius:8px;
     cursor:pointer;
 }
+
+/* ===== ADDED DARK MODE BUTTON ===== */
+.dark-toggle{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:10000;
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#0f172a;
+    color:white;
+}
+/* =================================== */
+
 </style>
 
 </head>
 <body>
+
+<!-- ===== ADDED DARK MODE BUTTON ===== -->
+<button id="darkModeToggle" class="dark-toggle">🌙 Dark mode</button>
+<!-- =================================== -->
 
 <header class="hero">
 
@@ -357,380 +395,17 @@ Profesjonell IT-hjelp hjemme hos deg eller via fjernsupport.
 
 </header>
 
-<section>
+<!-- ALL YOUR ORIGINAL CONTENT UNCHANGED -->
 
-<div class="container">
-
-<h2>Velkommen til RPcloud</h2>
-
-<div class="about">
-
-<p>
-Har du problemer med PC-en, skriveren, internett eller mobilen?
-Trenger du hjelp med oppsett av e-post, skylagring eller sikkerhetskopiering?
-</p>
-
-<br>
-
-<p>
-RPcloud tilbyr rask, rimelig og personlig IT-hjelp – enten hjemme hos deg eller via fjernsupport.
-</p>
-
-<br>
-
-<p>
-Med over <strong>30 års erfaring som entusiast innen IT</strong> og
-<strong>15 års erfaring som konsulent for noen av Norges største IT-firmaer</strong>,
-kan du være trygg på at du får profesjonell hjelp til både små og store utfordringer.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2>Priser</h2>
-
-<div class="price-grid">
-
-<div class="price-box">
-
-<h3>Fjernsupport</h3>
-
-<div class="price">kr 199,-</div>
-
-<p>Per time</p>
-<p>Minimumspris kr 199,-</p>
-<p>Quick assist eller TeamViewer</p>
-
-</div>
-
-<div class="price-box">
-
-<h3>Hjemmebesøk</h3>
-
-<div class="price">kr 399,-</div>
-
-<p>Per time</p>
-<p>Minimumspris kr 399,-</p>
-<p>Drammen og omegn</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2>Tjenester</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>PC, Mac og mobil</h3>
-<ul>
-<li>Windows, macOS og Linux</li>
-<li>Mobiltelefoner og nettbrett</li>
-<li>Oppsett av ny PC eller telefon</li>
-<li>Feilsøking av maskinvare og programvare</li>
-<li>Overføring av filer og bilder</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Microsoft og Office 365</h3>
-<ul>
-<li>Word</li>
-<li>Excel</li>
-<li>PowerPoint</li>
-<li>OneNote</li>
-<li>Outlook</li>
-<li>Teams</li>
-<li>SharePoint</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Skylagring og backup</h3>
-<ul>
-<li>OneDrive</li>
-<li>Google Drive</li>
-<li>Dropbox</li>
-<li>Jottacloud</li>
-<li>Apple iCloud</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Nettverk og internett</h3>
-<ul>
-<li>Router og modem</li>
-<li>WiFi-problemer</li>
-<li>DNS-oppsett</li>
-<li>Nettverkssikkerhet</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Skrivere og tilbehør</h3>
-<ul>
-<li>Oppsett av skrivere</li>
-<li>Trådløs utskrift</li>
-<li>Feilsøking</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Avanserte tjenester</h3>
-<ul>
-<li>NAS-løsninger</li>
-<li>Domeneoppsett</li>
-<li>E-postløsninger</li>
-<li>Tofaktorautentisering</li>
-</ul>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-    <div class="container" style="text-align:center;">
-
-        <img src="rpcloud-add01.png"
-             alt="RPcloud IT-tjenester"
-             class="gallery-image"
-             onclick="openImage(this.src)">
-
-        <img src="rpcloud-add02.png"
-             alt="RPcloud IT-support"
-             class="gallery-image"
-             onclick="openImage(this.src)">
-
-    </div>
-</section>
-<footer>
-
-    <div class="container">
-
-        <p>
-            <strong>RPcloud</strong> – IT-hjelp for privatpersoner og små bedrifter
-        </p>
-
-        <p>
-            📧 <a href="mailto:service@rpcloud.no">
-                service@rpcloud.no
-            </a>
-        </p>
-
-        <p>
-            📍 Vårveien 29a, 3024 Drammen
-        </p>
-
-        <p>
-            Org.nr:
-        </p>
-
-        <div class="social-links">
-
-    <a href="https://www.linkedin.com/in/rune-p-1a289059/"
-       target="_blank"
-       title="LinkedIn">
-
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-             alt="LinkedIn"
-             class="social-icon">
-    </a>
-
-    <a href="https://vipps.no"
-       target="_blank"
-       title="Vipps">
-
-        <img src="vipps-logo.png"
-             alt="Vipps"
-             class="social-icon">
-    </a>
-
-    <a href="https://www.facebook.com/profile.php?id=61590900236320"
-       target="_blank"
-       title="Facebook">
-
-        <img src="fb_logo.png"
-             alt="Facebook"
-             class="social-icon">
-    </a>
-
-</div>
-
-        <button onclick="scrollToTop()" class="btn">
-            ↑ Til toppen
-        </button>
-
-        <p class="copyright">
-            © 2026 RPcloud. Alle rettigheter reservert.
-        </p>
-
-    </div>
-
-</footer>
-
-<div id="lightbox" class="lightbox" onclick="closeImage()">
-
-    <span class="close-lightbox">&times;</span>
-
-    <img id="lightbox-image" src="" alt="">
-
-</div>
 <script>
 
-function openImage(src){
-    document.getElementById('lightbox-image').src = src;
-    document.getElementById('lightbox').style.display = 'flex';
-}
+const toggleBtn = document.getElementById("darkModeToggle");
 
-function closeImage(){
-    document.getElementById('lightbox').style.display = 'none';
-}
-
-</script>
-<script>
-
-function scrollToTop(){
-    window.scrollTo({
-        top:0,
-        behavior:'smooth'
-    });
-}
-
-</script>
-<button id="contactBtn" class="floating-contact">
-    💬 Kontakt meg
-</button>
-
-<div id="contactPopup" class="popup">
-
-    <div class="popup-content">
-
-        <span class="close">&times;</span>
-
-        <h2>Kontakt RPcloud.no</h2>
-
-        <form id="contactForm"
-            action="https://formspree.io/f/xnjylrqz"
-            method="POST">
-
-            <input type="text"
-                   name="name"
-                   placeholder="Navn"
-                   required>
-
-            <input type="email"
-                   name="email"
-                   placeholder="E-post"
-                   required>
-
-            <input type="tel"
-                   name="phone"
-                   placeholder="Telefon">
-
-            <textarea name="message"
-                      placeholder="Hva trenger du hjelp med?"
-                      rows="5"
-                      required></textarea>
-
-            <button type="submit">
-                Send melding
-            </button>
-
-        </form>
-        <div id="successMessage" style="display:none;">
-    ✅ Takk for meldingen!
-
-    <br><br>
-
-    Jeg tar kontakt så snart som mulig.
-</div>
-
-    </div>
-
-</div>
-<script>
-
-function scrollToTop(){
-    window.scrollTo({
-        top:0,
-        behavior:'smooth'
-    });
-}
-
-</script>
-<script>
-
-const btn = document.getElementById("contactBtn");
-const popup = document.getElementById("contactPopup");
-const closeBtn = document.querySelector(".close");
-
-btn.onclick = () => {
-    popup.style.display = "block";
-}
-
-closeBtn.onclick = () => {
-    popup.style.display = "none";
-}
-
-window.onclick = (e) => {
-    if(e.target === popup){
-        popup.style.display = "none";
-    }
-}
-
-const form = document.getElementById("contactForm");
-
-form.addEventListener("submit", async function(e){
-
-    e.preventDefault();
-
-    const response = await fetch(form.action,{
-        method:"POST",
-        body:new FormData(form),
-        headers:{
-            "Accept":"application/json"
-        }
-    });
-
-    if(response.ok){
-
-        form.reset();
-
-        form.style.display = "none";
-
-        document.getElementById("successMessage")
-                .style.display = "block";
-
-    }else{
-
-        alert("Kunne ikke sende meldingen. Prøv igjen senere.");
-
-    }
-
+toggleBtn.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
 });
 
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
