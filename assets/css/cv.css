@@ -1,13 +1,49 @@
+/* Better spacing consistency */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Card system consistency */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Job spacing consistency */
 .job {
     margin-bottom: 18px;
 }
 
+/* Buttons fix */
 .hero-buttons {
+    margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Profile image slightly refined */
 .profile-image {
     width: 220px;
     height: 220px;
