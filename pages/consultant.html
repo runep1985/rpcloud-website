@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rune André Pedersen | Senior IT Consultant</title>
+  <meta name="description" content="Microsoft 365 | Azure | Intune | Modern Workplace Consultant" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="canonical" href="https://rpcloud.no/consultant.html" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --card: rgba(30, 41, 59, 0.55);
+      --border: rgba(148, 163, 184, 0.15);
+      --accent: #3b82f6;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: rgba(255, 255, 255, 0.7);
+      --border: rgba(15, 23, 42, 0.1);
+      --accent: #2563eb;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+      background: radial-gradient(circle at top, #1e293b, var(--bg));
+      color: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    /* GLASS */
+    .glass {
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .glass:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 120px 0 70px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: -1px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .cta {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(59,130,246,0.15);
+      border: 1px solid var(--border);
+      margin: 4px;
+      font-size: 12px;
+    }
+
+    /* TOGGLE */
+    .topbar {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 999;
+    }
+
+    .toggle {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 0;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <button class="toggle" onclick="toggleTheme()">🌙 Theme</button>
+</div>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Senior IT Consultant</h1>
+    <p>Microsoft 365 • Azure • Intune • Modern Workplace</p>
+
+    <div class="cta">
+      <a class="btn" href="mailto:rune@rpcloud.no">Kontakt</a>
+      <a class="btn secondary" href="projects.html">Prosjekter</a>
+      <a class="btn secondary" href="cv.html">CV</a>
+    </div>
+  </div>
+
+  <!-- VALUE -->
+  <section>
+    <h2>Hva jeg leverer</h2>
+
+    <div class="grid">
+      <div class="glass card">
+        <h3>Modern Workplace</h3>
+        <p>Microsoft 365, Teams, SharePoint og effektiv arbeidsflyt.</p>
+      </div>
+
+      <div class="glass card">
+        <h3>Azure</h3>
+        <p>Cloud, migrering, identitet og enterprise arkitektur.</p>
+      </div>
+
+      <div class="glass card">
+        <h3>Endpoint Management</h3>
+        <p>Intune, Autopilot og device lifecycle management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>Kjernekompetanse</h2>
+
+    <div class="glass card">
+      <span class="tag">Microsoft 365</span>
+      <span class="tag">Entra ID</span>
+      <span class="tag">Intune</span>
+      <span class="tag">Azure</span>
+      <span class="tag">Defender</span>
+      <span class="tag">SharePoint</span>
+      <span class="tag">PowerShell</span>
+      <span class="tag">Teams</span>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <h2>La oss jobbe sammen</h2>
+
+    <div class="glass card">
+      <p>Tilgjengelig for konsulentoppdrag innen Microsoft 365 og Azure.</p>
+
+      <div class="cta">
+        <a class="btn" href="mailto:rune@rpcloud.no">Send e-post</a>
+        <a class="btn secondary" href="https://www.linkedin.com">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Rune André Pedersen · RPcloud
+  </footer>
+
+</div>
+
+<script>
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  }
+
+  (function initTheme() {
+    const saved = localStorage.getItem("theme");
+    if (saved) {
+      document.documentElement.setAttribute("data-theme", saved);
+    }
+  })();
+</script>
+
+</body>
+</html>
