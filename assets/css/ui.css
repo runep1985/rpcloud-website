@@ -1,0 +1,43 @@
+/* GLOBAL UI BUTTONS */
+
+/* DARK MODE TOGGLE */
+.dark-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.dark-toggle:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* TOP BUTTON */
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 9999;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.top-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
