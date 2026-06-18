@@ -331,10 +331,45 @@ footer{
     border-radius:8px;
     cursor:pointer;
 }
-</style>
+/* ================= DARK MODE ================= */
 
+body.dark-mode{
+    background:#0b1220;
+    color:#e5e7eb;
+}
+
+body.dark-mode h2{
+    color:#93c5fd;
+}
+
+body.dark-mode .hero{
+    background:linear-gradient(135deg,#000814,#001d3d);
+}
+
+body.dark-mode .price-box,
+body.dark-mode .card,
+body.dark-mode .contact,
+body.dark-mode .popup-content{
+    background:#111827;
+    color:#e5e7eb;
+}
+
+body.dark-mode footer{
+    background:#000;
+}
+
+body.dark-mode .price{
+    color:#60a5fa;
+}
+</style>
 </head>
 <body>
+    <button id="darkModeToggle"
+        style="position:fixed;top:15px;right:15px;z-index:99999;
+               padding:10px 14px;border-radius:8px;border:none;
+               cursor:pointer;background:#111;color:#fff;">
+    🌙
+</button>
 
 <header class="hero">
 
@@ -728,9 +763,26 @@ form.addEventListener("submit", async function(e){
 });
 
 </script>
+<script>
+const darkBtn = document.getElementById("darkModeToggle");
 
-</body>
-</html>
+// Load saved mode
+if(localStorage.getItem("darkMode") === "enabled"){
+    document.body.classList.add("dark-mode");
+    darkBtn.textContent = "☀️";
+}
 
+darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        localStorage.setItem("darkMode","enabled");
+        darkBtn.textContent = "☀️";
+    } else {
+        localStorage.setItem("darkMode","disabled");
+        darkBtn.textContent = "🌙";
+    }
+});
+</script>
 </body>
 </html>
