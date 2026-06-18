@@ -116,3 +116,8 @@
     border-radius: 8px;
     font-size: 0.9rem;
 }
+.skill-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
