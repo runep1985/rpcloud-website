@@ -1,72 +1,126 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RPcloud | IT-hjelp for privatpersoner og små bedrifter</title>
 
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description"
+content="IT-hjelp i Drammen og omegn. Hjelp med PC, Mac, mobil, nettverk, skrivere, Office 365, skylagring og backup.">
 
-<meta name="description" content="IT-hjelp i Drammen og omegn. Hjelp med PC, Mac, mobil, nettverk, skrivere, Office 365, skylagring og backup.">
-<meta name="keywords" content="PC hjelp Drammen, IT hjelp, Windows, Mac, Linux, Office 365, OneDrive, printer, nettverk">
+<meta name="keywords"
+content="PC hjelp Drammen, IT hjelp, Windows, Mac, Linux, Office 365, OneDrive, printer, nettverk">
 
 <style>
-/* =========================
-   BASE
-========================= */
+    #aiChatBtn{
+    position:fixed;
+    bottom:20px;
+    left:20px;
 
-:root{
-    --bg:#f5f7fb;
-    --text:#1c1c1e;
-    --glass:rgba(255,255,255,0.55);
-    --border:rgba(255,255,255,0.35);
-    --primary:#0056b3;
-    --accent:#22c55e;
+    background:#0056b3;
+    color:white;
+    padding:14px 18px;
+    border-radius:50px;
+    cursor:pointer;
+    z-index:99999;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-body.dark{
-    --bg:#0b1220;
-    --text:#e5e7eb;
-    --glass:rgba(20,25,40,0.55);
-    --border:rgba(255,255,255,0.08);
+#aiChatBox{
+    position:fixed;
+    bottom:80px;
+    left:20px;
+    width:320px;
+    height:420px;
+
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,0.3);
+
+    border-radius:14px;
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+    z-index:99999;
 }
 
-body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    transition:0.3s ease;
-    line-height:1.6;
+body.dark #aiChatBox{
+    background:rgba(15,23,42,0.8);
 }
 
-/* =========================
-   APPLE GLASS NAV
-========================= */
+.chat-header{
+    padding:12px;
+    background:rgba(0,0,0,0.1);
+    display:flex;
+    justify-content:space-between;
+    font-weight:600;
+}
 
+#chatMessages{
+    flex:1;
+    padding:10px;
+    overflow-y:auto;
+    font-size:14px;
+}
+
+.chat-input{
+    display:flex;
+    border-top:1px solid rgba(0,0,0,0.1);
+}
+
+.chat-input input{
+    flex:1;
+    padding:10px;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:inherit;
+}
+
+.chat-input button{
+    padding:10px 14px;
+    border:none;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+}
 .glass-nav{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
     z-index:9999;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+body.dark .glass-nav{
+    background:rgba(15,23,42,0.55);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:14px 22px;
-
-    background:var(--glass);
-    backdrop-filter:blur(18px) saturate(180%);
-    -webkit-backdrop-filter:blur(18px) saturate(180%);
-
-    border-bottom:1px solid var(--border);
 }
 
 .logo-small{
     font-weight:700;
+    color:inherit;
     letter-spacing:0.5px;
 }
 
@@ -74,271 +128,881 @@ nav a{
     margin-left:18px;
     text-decoration:none;
     color:inherit;
-    opacity:0.8;
+    opacity:0.85;
     transition:0.2s;
 }
-nav a:hover{opacity:1}
 
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    padding:120px 20px 70px;
-    text-align:center;
-    background:linear-gradient(135deg,#001f3f,#0056b3);
-    color:white;
+nav a:hover{
+    opacity:1;
 }
 
-.hero img{
-    max-width:420px;
-    width:100%;
+/* kompensér for fixed navbar */
+body{
+    padding-top:70px;
+}
+:root{
+    --primary:#0056b3;
+    --secondary:#007bff;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --success:#22c55e;
 }
 
-.hero h1{font-size:2.8rem;margin:20px 0 10px}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-/* =========================
-   GLASS CARDS (APPLE STYLE)
-========================= */
-
-section{
-    padding:70px 20px;
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:#f8fafc;
+    color:#333;
+    line-height:1.6;
 }
 
 .container{
-    max-width:1100px;
+    width:90%;
+    max-width:1200px;
     margin:auto;
 }
 
-.glass{
-    background:var(--glass);
-    border:1px solid var(--border);
-    backdrop-filter:blur(18px) saturate(180%);
-    -webkit-backdrop-filter:blur(18px) saturate(180%);
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.15);
+.hero{
+    background:linear-gradient(135deg,#001f3f,#0056b3);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
 }
 
-/* GRID */
-.cards,.price-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
+.logo{
+    max-width:450px;
+    width:100%;
+    margin-bottom:25px;
 }
 
-/* =========================
-   PRICE
-========================= */
-
-.price{
-    font-size:2rem;
-    color:var(--primary);
-    font-weight:700;
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+.hero p{
+    font-size:1.2rem;
+}
+
+.badges{
+    margin-top:25px;
+}
+
+.badges span{
+    display:inline-block;
+    background:rgba(255,255,255,0.15);
+    padding:10px 18px;
+    margin:5px;
+    border-radius:25px;
+}
 
 .btn{
-    background:var(--accent);
+    display:inline-block;
+    margin-top:30px;
+    background:var(--success);
     color:white;
-    padding:12px 22px;
-    border:none;
-    border-radius:12px;
-    cursor:pointer;
-    font-weight:600;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-/* =========================
-   FLOAT CONTACT
-========================= */
+.btn:hover{
+    opacity:.9;
+}
 
+section{
+    padding:70px 0;
+}
+
+h2{
+    color:var(--primary);
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
+}
+
+.price-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.price-box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.price{
+    font-size:2.5rem;
+    color:var(--secondary);
+    font-weight:bold;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+.card li{
+    margin-bottom:8px;
+}
+
+.contact{
+    background:white;
+    max-width:700px;
+    margin:auto;
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.contact p{
+    margin:15px 0;
+}
+
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2rem;
+}
+
+.logo{
+    max-width:280px;
+}
+
+}
+.gallery-image{
+    max-width:350px;
+    width:100%;
+    margin:10px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    cursor:pointer;
+    transition:transform .2s;
+}
+
+.gallery-image:hover{
+    transform:scale(1.03);
+}
+
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+
+.social-links{
+    margin:20px 0;
+}
+
+.social-icon{
+    width:48px;
+    height:48px;
+    margin:0 10px;
+    transition:transform .2s;
+}
+
+.social-icon:hover{
+    transform:scale(1.1);
+}
+
+.top-button{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:15px;
+}
+
+.top-button:hover{
+    opacity:.9;
+}
+
+.copyright{
+    margin-top:20px;
+    font-size:.9rem;
+    opacity:.8;
+}
 .floating-contact{
     position:fixed;
     bottom:20px;
     right:20px;
-    background:var(--accent);
+    background:#22c55e;
     color:white;
-    padding:14px 20px;
-    border-radius:999px;
     border:none;
+    padding:15px 25px;
+    border-radius:50px;
     cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    z-index:9999;
 }
-
-/* =========================
-   POPUP
-========================= */
 
 .popup{
     display:none;
     position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+    z-index:10000;
 }
 
 .popup-content{
-    background:var(--glass);
-    backdrop-filter:blur(20px);
-    border-radius:18px;
+    background:white;
+    width:90%;
     max-width:500px;
-    margin:10% auto;
-    padding:25px;
+    margin:100px auto;
+    padding:30px;
+    border-radius:12px;
+    position:relative;
 }
 
-/* =========================
-   DARK TOGGLE
-========================= */
-
-.theme-toggle{
-    position:fixed;
-    top:70px;
+.close{
+    position:absolute;
     right:20px;
-    z-index:99999;
-    padding:10px 14px;
-    border-radius:999px;
+    top:15px;
+    cursor:pointer;
+    font-size:24px;
+}
+
+.popup input,
+.popup textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.popup button{
+    width:100%;
+    padding:14px;
+    background:#0056b3;
+    color:white;
     border:none;
+    border-radius:8px;
     cursor:pointer;
 }
-
+</style>
+<style>
 /* =========================
-   MISC
+   LIQUID GLASS UPGRADE
 ========================= */
 
-.gallery-image{
-    width:100%;
-    max-width:320px;
-    border-radius:12px;
+:root{
+    --glass-bg: rgba(255,255,255,0.18);
+    --glass-border: rgba(255,255,255,0.25);
 }
 
-footer{
-    text-align:center;
-    padding:40px;
-    opacity:0.8;
+body.dark{
+    --glass-bg: rgba(15,23,42,0.35);
+    --glass-border: rgba(255,255,255,0.08);
+}
+
+/* Liquid glass base */
+.price-box,
+.card,
+.contact,
+.popup-content,
+.glass-nav{
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(22px) saturate(180%);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle “shine” layer */
+.price-box::before,
+.card::before,
+.contact::before,
+.popup-content::before,
+.glass-nav::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.12)
+    );
+    opacity:0.5;
+    pointer-events:none;
+}
+
+/* dark mode adjustment */
+body.dark .price-box::before,
+body.dark .card::before,
+body.dark .contact::before,
+body.dark .popup-content::before,
+body.dark .glass-nav::before{
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.06)
+    );
 }
 </style>
 </head>
 
+    <div class="nav-inner">
+        <div class="logo-small">
+            RPcloud
+        </div>
+
+        <nav>
+            <a href="#tjenester">Tjenester</a>
+            <a href="#priser">Priser</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </div>
+</header>
 <body>
+<button class="theme-toggle" onclick="toggleTheme()">
+🌙 Dark mode
+</button>
 
-<!-- NAV -->
-<header class="glass-nav">
-    <div class="logo-small">RPcloud</div>
-    <nav>
-        <a href="#tjenester">Tjenester</a>
-        <a href="#priser">Priser</a>
-        <a href="#kontakt">Kontakt</a>
-    </nav>
-</header>
-
-<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-
-<!-- HERO -->
 <header class="hero">
-    <img src="RPcloud_Blue_Trans.png">
-    <h1>IT-hjelp for privatpersoner og små bedrifter</h1>
-    <p>Profesjonell hjelp hjemme hos deg eller via fjernsupport</p>
+
+<img src="RPcloud_Blue_Trans.png" alt="RPcloud Logo" class="logo">
+
+<h1>IT-hjelp for privatpersoner og små bedrifter</h1>
+
+<p>
+Profesjonell IT-hjelp hjemme hos deg eller via fjernsupport.
+</p>
+
+<div class="badges">
+<span>Windows</span>
+<span>Mac</span>
+<span>Linux</span>
+<span>Mobil</span>
+<span>Nettverk</span>
+<span>Skylagring</span>
+</div>
+
 </header>
 
-<!-- ABOUT -->
 <section>
-<div class="container glass">
+
+<div class="container">
+
 <h2>Velkommen til RPcloud</h2>
-<p>Har du problemer med PC, Mac, nettverk eller mobil? Vi hjelper deg raskt og effektivt.</p>
+
+<div class="about">
+
+<p>
+Har du problemer med PC-en, skriveren, internett eller mobilen?
+Trenger du hjelp med oppsett av e-post, skylagring eller sikkerhetskopiering?
+</p>
+
+<br>
+
+<p>
+RPcloud tilbyr rask, rimelig og personlig IT-hjelp – enten hjemme hos deg eller via fjernsupport.
+</p>
+
+<br>
+
+<p>
+Med over <strong>30 års erfaring som entusiast innen IT</strong> og
+<strong>15 års erfaring som konsulent for noen av Norges største IT-firmaer</strong>,
+kan du være trygg på at du får profesjonell hjelp til både små og store utfordringer.
+</p>
+
 </div>
+
+</div>
+
 </section>
 
-<!-- PRISER -->
-<section id="priser">
+<section>
+
 <div class="container">
+
 <h2>Priser</h2>
 
 <div class="price-grid">
 
-<div class="glass">
+<div class="price-box">
+
 <h3>Fjernsupport</h3>
+
 <div class="price">kr 199,-</div>
+
 <p>Per time</p>
+<p>Minimumspris kr 199,-</p>
+<p>Quick assist eller TeamViewer</p>
+
 </div>
 
-<div class="glass">
+<div class="price-box">
+
 <h3>Hjemmebesøk</h3>
+
 <div class="price">kr 399,-</div>
+
 <p>Per time</p>
+<p>Minimumspris kr 399,-</p>
+<p>Drammen og omegn</p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-<!-- TJENESTER -->
-<section id="tjenester">
+<section>
+
 <div class="container">
+
 <h2>Tjenester</h2>
 
 <div class="cards">
 
-<div class="glass">
-<h3>PC & Mobil</h3>
-<p>Windows, Mac, Linux, mobil og nettbrett</p>
+<div class="card">
+<h3>PC, Mac og mobil</h3>
+<ul>
+<li>Windows, macOS og Linux</li>
+<li>Mobiltelefoner og nettbrett</li>
+<li>Oppsett av ny PC eller telefon</li>
+<li>Feilsøking av maskinvare og programvare</li>
+<li>Overføring av filer og bilder</li>
+</ul>
 </div>
 
-<div class="glass">
-<h3>Office 365</h3>
-<p>Word, Excel, Outlook, Teams</p>
+<div class="card">
+<h3>Microsoft og Office 365</h3>
+<ul>
+<li>Word</li>
+<li>Excel</li>
+<li>PowerPoint</li>
+<li>OneNote</li>
+<li>Outlook</li>
+<li>Teams</li>
+<li>SharePoint</li>
+</ul>
 </div>
 
-<div class="glass">
-<h3>Nettverk</h3>
-<p>WiFi, router, internett</p>
+<div class="card">
+<h3>Skylagring og backup</h3>
+<ul>
+<li>OneDrive</li>
+<li>Google Drive</li>
+<li>Dropbox</li>
+<li>Jottacloud</li>
+<li>Apple iCloud</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Nettverk og internett</h3>
+<ul>
+<li>Router og modem</li>
+<li>WiFi-problemer</li>
+<li>DNS-oppsett</li>
+<li>Nettverkssikkerhet</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Skrivere og tilbehør</h3>
+<ul>
+<li>Oppsett av skrivere</li>
+<li>Trådløs utskrift</li>
+<li>Feilsøking</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Avanserte tjenester</h3>
+<ul>
+<li>NAS-løsninger</li>
+<li>Domeneoppsett</li>
+<li>E-postløsninger</li>
+<li>Tofaktorautentisering</li>
+</ul>
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-<!-- KONTAKT -->
-<section id="kontakt">
-<div class="container glass">
-<h2>Kontakt</h2>
-<p>service@rpcloud.no</p>
-<p>Vårveien 29a, Drammen</p>
-</div>
-</section>
+<section>
+    <div class="container" style="text-align:center;">
 
-<!-- FOOTER -->
+        <img src="rpcloud-add01.png"
+             alt="RPcloud IT-tjenester"
+             class="gallery-image"
+             onclick="openImage(this.src)">
+
+        <img src="rpcloud-add02.png"
+             alt="RPcloud IT-support"
+             class="gallery-image"
+             onclick="openImage(this.src)">
+
+    </div>
+</section>
 <footer>
-© 2026 RPcloud
+
+    <div class="container">
+
+        <p>
+            <strong>RPcloud</strong> – IT-hjelp for privatpersoner og små bedrifter
+        </p>
+
+        <p>
+            📧 <a href="mailto:service@rpcloud.no">
+                service@rpcloud.no
+            </a>
+        </p>
+
+        <p>
+            📍 Vårveien 29a, 3024 Drammen
+        </p>
+
+        <p>
+            Org.nr:
+        </p>
+
+        <div class="social-links">
+
+    <a href="https://www.linkedin.com/in/rune-p-1a289059/"
+       target="_blank"
+       title="LinkedIn">
+
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+             alt="LinkedIn"
+             class="social-icon">
+    </a>
+
+    <a href="https://vipps.no"
+       target="_blank"
+       title="Vipps">
+
+        <img src="vipps-logo.png"
+             alt="Vipps"
+             class="social-icon">
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61590900236320"
+       target="_blank"
+       title="Facebook">
+
+        <img src="fb_logo.png"
+             alt="Facebook"
+             class="social-icon">
+    </a>
+
+</div>
+
+        <button onclick="scrollToTop()" class="btn">
+            ↑ Til toppen
+        </button>
+
+        <p class="copyright">
+            © 2026 RPcloud. Alle rettigheter reservert.
+        </p>
+
+    </div>
+
 </footer>
 
-<!-- CONTACT POPUP -->
-<button class="floating-contact" onclick="openPopup()">Kontakt</button>
+<div id="lightbox" class="lightbox" onclick="closeImage()">
 
-<div class="popup" id="popup">
-<div class="popup-content">
-<span onclick="closePopup()" style="float:right;cursor:pointer">✕</span>
-<h3>Kontakt oss</h3>
-<input placeholder="Navn"><br><br>
-<input placeholder="E-post"><br><br>
-<textarea placeholder="Melding"></textarea><br><br>
-<button class="btn">Send</button>
-</div>
-</div>
+    <span class="close-lightbox">&times;</span>
 
+    <img id="lightbox-image" src="" alt="">
+
+</div>
 <script>
+
+function openImage(src){
+    document.getElementById('lightbox-image').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeImage(){
+    document.getElementById('lightbox').style.display = 'none';
+}
+
+</script>
+<script>
+
+function scrollToTop(){
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
+}
+
+</script>
+<button id="contactBtn" class="floating-contact">
+    💬 Kontakt meg
+</button>
+
+<div id="contactPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Kontakt RPcloud.no</h2>
+
+        <form id="contactForm"
+            action="https://formspree.io/f/xnjylrqz"
+            method="POST">
+
+            <input type="text"
+                   name="name"
+                   placeholder="Navn"
+                   required>
+
+            <input type="email"
+                   name="email"
+                   placeholder="E-post"
+                   required>
+
+            <input type="tel"
+                   name="phone"
+                   placeholder="Telefon">
+
+            <textarea name="message"
+                      placeholder="Hva trenger du hjelp med?"
+                      rows="5"
+                      required></textarea>
+
+            <button type="submit">
+                Send melding
+            </button>
+
+        </form>
+        <div id="successMessage" style="display:none;">
+    ✅ Takk for meldingen!
+
+    <br><br>
+
+    Jeg tar kontakt så snart som mulig.
+</div>
+
+    </div>
+
+</div>
+<script>
+
+function scrollToTop(){
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
+}
+
+</script>
+<script>
+
+const btn = document.getElementById("contactBtn");
+const popup = document.getElementById("contactPopup");
+const closeBtn = document.querySelector(".close");
+
+btn.onclick = () => {
+    popup.style.display = "block";
+}
+
+closeBtn.onclick = () => {
+    popup.style.display = "none";
+}
+
+window.onclick = (e) => {
+    if(e.target === popup){
+        popup.style.display = "none";
+    }
+}
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const response = await fetch(form.action,{
+        method:"POST",
+        body:new FormData(form),
+        headers:{
+            "Accept":"application/json"
+        }
+    });
+
+    if(response.ok){
+
+        form.reset();
+
+        form.style.display = "none";
+
+        document.getElementById("successMessage")
+                .style.display = "block";
+
+    }else{
+
+        alert("Kunne ikke sende meldingen. Prøv igjen senere.");
+
+    }
+
+});
+
+</script>
+<script>
+function setTheme(mode){
+    if(mode === "dark"){
+        document.body.classList.add("dark");
+        localStorage.setItem("theme","dark");
+    } else {
+        document.body.classList.remove("dark");
+        localStorage.setItem("theme","light");
+    }
+}
+
 function toggleTheme(){
-    document.body.classList.toggle("dark");
+    const isDark = document.body.classList.contains("dark");
+    setTheme(isDark ? "light" : "dark");
 }
 
-function openPopup(){
-    document.getElementById("popup").style.display="block";
-}
+// init
+(function(){
+    const saved = localStorage.getItem("theme");
 
-function closePopup(){
-    document.getElementById("popup").style.display="none";
-}
+    if(saved){
+        setTheme(saved);
+    } else {
+        // system preference
+        if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
+            setTheme("dark");
+        }
+    }
+})();
 </script>
 
+    <div id="chatMessages"></div>
+
+    <div class="chat-input">
+        <input id="chatInput" placeholder="Skriv et spørsmål..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
 </body>
 </html>
+<script>
+function toggleChat(){
+    const box = document.getElementById("aiChatBox");
+    box.style.display = box.style.display === "flex" ? "none" : "flex";
+}
+
+document.getElementById("aiChatBtn").onclick = toggleChat;
+
+function addMessage(text, from){
+    const msg = document.createElement("div");
+    msg.style.margin = "8px 0";
+    msg.innerHTML = `<strong>${from}:</strong> ${text}`;
+    document.getElementById("chatMessages").appendChild(msg);
+}
+
+function sendMessage(){
+    const input = document.getElementById("chatInput");
+    const text = input.value;
+    if(!text) return;
+
+    addMessage(text, "Du");
+
+    // enkel “AI” logikk (placeholder)
+    let reply = "Jeg kan hjelpe deg med det. Vil du at jeg kobler dette til ekte AI (ChatGPT API)?";
+
+    if(text.toLowerCase().includes("pris")){
+        reply = "Prisene starter fra kr 199,- for fjernsupport og 399,- for hjemmebesøk.";
+    }
+
+    if(text.toLowerCase().includes("hjelp")){
+        reply = "Jeg kan hjelpe med PC, Mac, nettverk, Office 365 og mer.";
+    }
+
+    setTimeout(() => addMessage(reply, "RPcloud AI"), 400);
+
+    input.value = "";
+}
+</script>
