@@ -94,22 +94,23 @@
 ========================= */
 
 @media (max-width: 600px) {
-    .cv-header {
+    .cv-hero {
         flex-direction: column;
         text-align: center;
-    }
-
-    .profile-image {
-        width: 100px;
-        height: 100px;
     }
 }
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
+
+    gap: 16px;
+    padding: 40px 20px;
+
+    color: white;
+    background: linear-gradient(135deg,#001f3f,#0056b3);
+}
 /* CV HERO IMAGE OVERRIDE */
 .cv-hero .profile-image {
     width: 160px;
