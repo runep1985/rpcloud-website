@@ -1,5 +1,3 @@
-console.log("APP.JS LOADED");
-
 // assets/js/app.js
 
 (function () {
