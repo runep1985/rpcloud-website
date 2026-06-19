@@ -86,3 +86,21 @@
 .nav-links a:hover {
     color: white;
 }
+a.top-button {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    left: auto !important;
+
+    display: inline-block !important;
+    width: auto !important;
+    max-width: max-content !important;
+
+    background: var(--primary) !important;
+    color: white !important;
+    padding: 12px 18px !important;
+    border-radius: 50px !important;
+
+    text-decoration: none !important;
+    z-index: 9999 !important;
+}
