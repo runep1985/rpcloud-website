@@ -1,8 +1,11 @@
-function openImage(src){
-    document.getElementById('lightbox-image').src = src;
-    document.getElementById('lightbox').style.display = 'flex';
+function openImage(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-image');
+
+    img.src = src;
+    lightbox.classList.add('active');
 }
 
-function closeImage(){
-    document.getElementById('lightbox').style.display = 'none';
+function closeImage() {
+    document.getElementById('lightbox').classList.remove('active');
 }
