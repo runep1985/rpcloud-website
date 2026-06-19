@@ -79,23 +79,3 @@ body {
 .site-nav {
     height: 72px;
 }
-.top-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-}
-.top-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-
-    background: #222;
-    color: white;
-    padding: 10px 14px;
-    border-radius: 8px;
-
-    text-decoration: none;
-    font-size: 14px;
-}
