@@ -63,3 +63,13 @@
     text-align: center;
     gap: 10px;
 }
+
+.footer-text p {
+    margin: 2px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
