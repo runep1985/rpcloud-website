@@ -1,48 +1,42 @@
-const btn = document.getElementById("contactBtn");
-const popup = document.getElementById("contactPopup");
-const closeBtn = document.querySelector(".close");
+document.addEventListener("DOMContentLoaded", () => {
 
-btn.onclick = () => {
-    popup.style.display = "block";
-}
+    const btn = document.getElementById("contactBtn");
+    const popup = document.getElementById("contactPopup");
+    const closeBtn = document.querySelector(".close");
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
 
-closeBtn.onclick = () => {
-    popup.style.display = "none";
-}
-
-window.onclick = (e) => {
-    if(e.target === popup){
-        popup.style.display = "none";
+    function openPopup() {
+        popup.classList.add("active");
     }
-}
 
-const form = document.getElementById("contactForm");
+    function closePopup() {
+        popup.classList.remove("active");
+    }
 
-form.addEventListener("submit", async function(e){
+    btn?.addEventListener("click", openPopup);
+    closeBtn?.addEventListener("click", closePopup);
 
-    e.preventDefault();
-
-    const response = await fetch(form.action,{
-        method:"POST",
-        body:new FormData(form),
-        headers:{
-            "Accept":"application/json"
-        }
+    popup?.addEventListener("click", (e) => {
+        if (e.target === popup) closePopup();
     });
 
-    if(response.ok){
+    form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-        form.reset();
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { "Accept": "application/json" }
+        });
 
-        form.style.display = "none";
-
-        document.getElementById("successMessage")
-                .style.display = "block";
-
-    }else{
-
-        alert("Kunne ikke sende meldingen. Prøv igjen senere.");
-
-    }
+        if (response.ok) {
+            form.reset();
+            form.style.display = "none";
+            successMessage?.classList.remove("hidden");
+        } else {
+            alert("Kunne ikke sende meldingen. Prøv igjen senere.");
+        }
+    });
 
 });
