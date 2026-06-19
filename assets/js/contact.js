@@ -1,10 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initContact() {
 
     const btn = document.getElementById("contactBtn");
     const popup = document.getElementById("contactPopup");
     const closeBtn = document.querySelector(".close");
     const form = document.getElementById("contactForm");
     const successMessage = document.getElementById("successMessage");
+
+    if (!btn || !popup || !form) return;
 
     function openPopup() {
         popup.classList.add("active");
@@ -14,14 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
         popup.classList.remove("active");
     }
 
-    btn?.addEventListener("click", openPopup);
+    btn.addEventListener("click", openPopup);
     closeBtn?.addEventListener("click", closePopup);
 
-    popup?.addEventListener("click", (e) => {
+    popup.addEventListener("click", (e) => {
         if (e.target === popup) closePopup();
     });
 
-    form?.addEventListener("submit", async (e) => {
+    form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const response = await fetch(form.action, {
@@ -38,5 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Kunne ikke sende meldingen. Prøv igjen senere.");
         }
     });
+}
 
-});
+window.initContact = initContact;
