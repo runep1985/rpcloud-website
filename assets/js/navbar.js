@@ -1,6 +1,5 @@
-// navbar.js
+function initNavbar() {
 
-document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll(".nav-links a");
     const currentPath = window.location.pathname;
 
@@ -12,4 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.add("active");
         }
     });
-});
+}
+
+window.initNavbar = initNavbar;
