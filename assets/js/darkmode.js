@@ -1,25 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
     const darkBtn = document.getElementById("darkModeToggle");
-
     if (!darkBtn) return;
 
-    // Load saved mode
-    if (localStorage.getItem("darkMode") === "enabled") {
-        document.body.classList.add("dark-mode");
-        darkBtn.textContent = "☀️";
-    } else {
-        darkBtn.textContent = "🌙";
+    function updateIcon() {
+        const isDark = document.body.classList.contains("dark-mode");
+        darkBtn.textContent = isDark ? "☀️" : "🌙";
     }
+
+    // Load saved mode
+    const saved = localStorage.getItem("darkMode");
+
+    if (saved === "enabled") {
+        document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+    }
+
+    updateIcon();
 
     darkBtn.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
 
-        if (document.body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-            darkBtn.textContent = "☀️";
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-            darkBtn.textContent = "🌙";
-        }
+        const isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
+
+        updateIcon();
     });
 });
