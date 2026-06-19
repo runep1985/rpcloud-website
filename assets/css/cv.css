@@ -1,118 +1,92 @@
 /* =========================
-   CV PAGE LAYOUT
-========================= */
+   CV PAGE FIX - CENTERING
+   ========================= */
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
+* {
+  box-sizing: border-box;
 }
 
-/* =========================
-   CV HEADER (LinkedIn-style)
-========================= */
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
+/* Page background */
+body {
+  background: #f4f6f8;
+}
+
+/* HERO stays full width but content centered inside */
 .cv-hero {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 40px 20px;
-    color: white;
-    background: linear-gradient(135deg,#001f3f,#0056b3);
+  text-align: center;
+  padding: 60px 20px;
 }
 
-/* Profile image (LinkedIn-style avatar) */
+/* Profile image styling */
 .profile-image {
-    width: 145px;
-    height: 145px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #2563eb;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.30);
-}
-.profile-image:hover {
-    transform: scale(1.03);
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
-/* Name + title block */
-.cv-intro h1 {
-    margin: 0;
-    font-size: 1.8rem;
+/* 🔥 THIS IS THE ACTUAL CENTERING FIX */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto !important;
+  padding: 0 20px;
 }
 
-.cv-intro p {
-    margin: 6px 0 0 0;
-    opacity: 0.8;
+/* Cards layout */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-/* =========================
-   CARDS / SECTIONS
-========================= */
-
+/* Card styling */
 .card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* Job spacing consistency */
-.job {
-    margin-bottom: 18px;
+/* Sections spacing */
+section {
+  padding: 30px 0;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
+/* Buttons */
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 18px;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.2s ease;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background: #111;
+  color: white;
+  text-decoration: none;
 }
 
-.btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-1px);
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
 }
 
-/* =========================
-   RESPONSIVE (MOBILE)
-========================= */
-
+/* Mobile fix */
 @media (max-width: 600px) {
-    .cv-hero {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    gap: 16px;
-    padding: 40px 20px;
-
-    color: white;
-    background: linear-gradient(135deg,#001f3f,#0056b3);
-}
-/* CV HERO IMAGE OVERRIDE */
-.cv-hero .profile-image {
-    width: 160px;
-    height: 160px;
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
