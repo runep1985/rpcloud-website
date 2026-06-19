@@ -104,3 +104,26 @@ a.top-button {
     text-decoration: none !important;
     z-index: 9999 !important;
 }
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: inline-block;
+    width: auto;
+    max-width: max-content;
+
+    padding: 12px 18px;
+    border-radius: 50px;
+
+    background: var(--primary);
+    color: white;
+
+    border: none;
+    cursor: pointer;
+
+    text-decoration: none;
+    font-size: 14px;
+
+    z-index: 9999;
+}
