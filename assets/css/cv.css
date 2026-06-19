@@ -23,8 +23,8 @@
 
 /* Profile image (LinkedIn-style avatar) */
 .profile-image {
-    width: 125px;
-    height: 125px;
+    width: 145px;
+    height: 145px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #2563eb;
