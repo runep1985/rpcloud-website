@@ -45,3 +45,14 @@
     border-radius: 8px;
     cursor: pointer;
 }
+.site-footer {
+    background: red !important;
+    text-align: center !important;
+    display: block !important;
+}
+
+.social-links {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+}
