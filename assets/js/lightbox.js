@@ -1,19 +1,21 @@
-document.querySelectorAll(".js-lightbox").forEach(img => {
-    img.addEventListener("click", () => {
-        const lightbox = document.getElementById("lightbox");
-        const image = document.getElementById("lightbox-image");
+function initLightbox() {
 
-        image.src = img.src;
-        lightbox.classList.add("active");
+    const images = document.querySelectorAll(".gallery-image");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-image");
+
+    if (!images || !lightbox || !lightboxImg) return;
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.classList.add("active");
+            lightboxImg.src = img.src;
+        });
     });
-});
 
-function closeImage() {
-    document.getElementById("lightbox").classList.remove("active");
+    lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+    });
 }
 
-document.querySelector(".close-lightbox")?.addEventListener("click", closeImage);
-
-document.getElementById("lightbox")?.addEventListener("click", (e) => {
-    if (e.target.id === "lightbox") closeImage();
-});
+window.initLightbox = initLightbox;
