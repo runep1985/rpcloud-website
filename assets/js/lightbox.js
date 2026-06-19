@@ -1,11 +1,25 @@
-function openImage(src) {
-    const lightbox = document.getElementById('lightbox');
-    const img = document.getElementById('lightbox-image');
+document.addEventListener("DOMContentLoaded", () => {
 
-    img.src = src;
-    lightbox.classList.add('active');
-}
+    const lightbox = document.getElementById("lightbox");
+    const image = document.getElementById("lightbox-image");
+    const closeBtn = document.querySelector(".close-lightbox");
 
-function closeImage() {
-    document.getElementById('lightbox').classList.remove('active');
-}
+    document.querySelectorAll(".js-lightbox").forEach(img => {
+        img.addEventListener("click", () => {
+            image.src = img.src;
+            lightbox.classList.add("active");
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove("active");
+        image.src = "";
+    }
+
+    closeBtn?.addEventListener("click", closeLightbox);
+
+    lightbox?.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+});
