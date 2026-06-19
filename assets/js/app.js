@@ -17,7 +17,7 @@
     safeInit("initNavbar");
     safeInit("initDarkMode");
     safeInit("initUI");
-    safeInit("initScrollToTop");
+    // safeInit("initScrollToTop");
     safeInit("initLightbox");
     safeInit("initContact");
   }
