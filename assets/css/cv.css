@@ -1,28 +1,44 @@
 /* =========================
-   CV PAGE FIX - CENTERING
+   CV PAGE - SAFE VERSION
+   (no theme breaking)
    ========================= */
 
-* {
-  box-sizing: border-box;
+/* Only CV layout fixes — NOTHING global */
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+/* Cards layout stays unchanged */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-/* Page background */
-body {
-  background: #f4f6f8;
+/* Card styling */
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* HERO stays full width but content centered inside */
+/* Sections spacing only */
+section {
+  padding: 30px 0;
+}
+
+/* Hero spacing only (DO NOT override colors) */
 .cv-hero {
   text-align: center;
   padding: 60px 20px;
 }
 
-/* Profile image styling */
+/* Profile image */
 .profile-image {
   width: 140px;
   height: 140px;
@@ -32,62 +48,11 @@ body {
   margin: 0 auto 20px auto;
 }
 
-/* 🔥 THIS IS THE ACTUAL CENTERING FIX */
-.container {
-  max-width: 1000px;
-  width: 100%;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding: 0 20px;
-  display: block;
-}
-/* Cards layout */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-/* Card styling */
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* Sections spacing */
-section {
-  padding: 30px 0;
-}
-
-/* Buttons */
+/* Buttons only layout (no colors changed) */
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
-}
-
-.btn {
-  padding: 10px 15px;
-  border-radius: 6px;
-  background: #111;
-  color: white;
-  text-decoration: none;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  margin-top: 40px;
-}
-
-/* Mobile fix */
-@media (max-width: 600px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
 }
