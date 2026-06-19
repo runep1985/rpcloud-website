@@ -38,15 +38,6 @@
     transform: scale(1.1);
 }
 
-.top-button {
-    margin-top: 20px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-
 .social-links {
     display: flex !important;
     justify-content: center !important;
