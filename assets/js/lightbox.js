@@ -1,25 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.querySelectorAll(".js-lightbox").forEach(img => {
+    img.addEventListener("click", () => {
+        const lightbox = document.getElementById("lightbox");
+        const image = document.getElementById("lightbox-image");
 
-    const lightbox = document.getElementById("lightbox");
-    const image = document.getElementById("lightbox-image");
-    const closeBtn = document.querySelector(".close-lightbox");
-
-    document.querySelectorAll(".js-lightbox").forEach(img => {
-        img.addEventListener("click", () => {
-            image.src = img.src;
-            lightbox.classList.add("active");
-        });
+        image.src = img.src;
+        lightbox.classList.add("active");
     });
+});
 
-    function closeLightbox() {
-        lightbox.classList.remove("active");
-        image.src = "";
-    }
+function closeImage() {
+    document.getElementById("lightbox").classList.remove("active");
+}
 
-    closeBtn?.addEventListener("click", closeLightbox);
+document.querySelector(".close-lightbox")?.addEventListener("click", closeImage);
 
-    lightbox?.addEventListener("click", (e) => {
-        if (e.target === lightbox) closeLightbox();
-    });
-
+document.getElementById("lightbox")?.addEventListener("click", (e) => {
+    if (e.target.id === "lightbox") closeImage();
 });
