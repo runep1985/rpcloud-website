@@ -75,3 +75,7 @@ h2{
 body {
     padding-top: 60px;
 }
+
+.site-nav {
+    height: 60px;
+}
