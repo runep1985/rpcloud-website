@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/layout.css">
 <link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/footer.css">
 
 <title>RPcloud | IT-hjelp for privatpersoner og små bedrifter</title>
 
@@ -202,50 +203,40 @@ kan du være trygg på at du får profesjonell hjelp til både små og store utf
     <div class="container center">
 
         <img src="assets/img/ui/rpcloud-add01.png"
-     alt="RPcloud IT-tjenester"
-     class="gallery-image js-lightbox">
+             alt="RPcloud IT-tjenester"
+             class="gallery-image"
+             onclick="openImage(this.src)">
 
         <img src="assets/img/ui/rpcloud-add02.png"
-     alt="RPcloud IT-support"
-     class="gallery-image js-lightbox">
+             alt="RPcloud IT-support"
+             class="gallery-image"
+             onclick="openImage(this.src)">
 
     </div>
 </section>
 <footer class="site-footer">
+
     <div class="container">
 
         <p><strong>RPcloud</strong> – IT-hjelp for privatpersoner og små bedrifter</p>
 
         <p>📧 service@rpcloud.no</p>
         <p>📍 Vårveien 29a, 3024 Drammen</p>
-        <p>Org.nr:</p>
+        <p>Org.nr: (legg inn her)</p>
 
         <div class="social-links">
-
-            <a href="https://www.linkedin.com/in/rune-p-1a289059/" target="_blank">
-                <img src="assets/img/ui/linkedin-icon.png" alt="LinkedIn" class="social-icon">
-            </a>
-
-            <a href="https://vipps.no" target="_blank">
-                <img src="assets/img/ui/vipps-icon.png" alt="Vipps" class="social-icon">
-            </a>
-
-            <a href="https://facebook.com" target="_blank">
-                <img src="assets/img/ui/fb-icon.png" alt="Facebook" class="social-icon">
-            </a>
-
-            <a href="https://www.rpcloud.no" target="_blank">
-                <img src="assets/img/ui/rpcloud-icon.png" alt="RPcloud" class="social-icon">
-            </a>
-
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://vipps.no" target="_blank">Vipps</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
         </div>
 
         <p class="copyright">© 2026 RPcloud</p>
 
     </div>
+
 </footer>
 
-<div id="lightbox" class="lightbox">
+<div id="lightbox" class="lightbox" onclick="closeImage()">
 
     <span class="close-lightbox">&times;</span>
 
