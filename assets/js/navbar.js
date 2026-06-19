@@ -1,3 +1,4 @@
+console.log("NAVBAR JS LOADED");
 function initNavbar() {
 
     const links = document.querySelectorAll(".nav-links a");
