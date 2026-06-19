@@ -45,11 +45,7 @@
     border-radius: 8px;
     cursor: pointer;
 }
-.site-footer {
-    background: red !important;
-    text-align: center !important;
-    display: block !important;
-}
+
 
 .social-links {
     display: flex !important;
@@ -66,10 +62,4 @@
 
 .footer-text p {
     margin: 2px 0;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
 }
