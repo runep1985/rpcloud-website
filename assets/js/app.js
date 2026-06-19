@@ -1,3 +1,5 @@
+console.log("APP.JS LOADED");
+
 // assets/js/app.js
 
 (function () {
@@ -14,7 +16,6 @@
   }
 
   function initApp() {
-    // Core UI systems
     safeInit("initNavbar");
     safeInit("initDarkMode");
     safeInit("initUI");
@@ -23,7 +24,6 @@
     safeInit("initContact");
   }
 
-  // Run after DOM is ready (extra safety even with defer)
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initApp);
   } else {
