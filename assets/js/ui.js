@@ -1,6 +1,5 @@
 function initUI() {
     const btn = document.querySelector(".top-button");
-
     if (!btn) return;
 
     btn.addEventListener("click", () => {
