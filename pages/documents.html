@@ -2,147 +2,141 @@
 <html lang="no">
 
 <head>
-    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
-    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-    
-    <!-- CSS files -->
-    <link rel="stylesheet" href="/assets/css/base.css">
-    <link rel="stylesheet" href="/assets/css/layout.css">
-    <link rel="stylesheet" href="/assets/css/components.css">
-    <link rel="stylesheet" href="/assets/css/ui.css">
-    <link rel="stylesheet" href="/assets/css/cv.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
+    <title>Dokumentarkiv | RPcloud</title>
 
-    <title>Dokumentarkiv | RPcloud.no</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
 
-<button id="darkModeToggle" class="dark-toggle">🌙</button>
+<!-- NAVBAR -->
+<nav class="navbar">
 
-<nav class="site-nav">
-    <div class="nav-container">
+    <div class="logo">
+        <a href="/index.html" style="color:white; text-decoration:none;">RPcloud</a>
+    </div>
 
-        <div class="nav-brand">
-            <a href="../index.html">RPcloud</a>
-        </div>
+    <div class="nav-links">
+        <a href="/index.html">Hjem</a>
+        <a href="/pages/cv.html">CV</a>
+        <a href="/pages/documents.html">Dokumenter</a>
 
-        <div class="nav-links">
-            <a href="../index.html">Hjem</a>
-            <a href="./cv.html">CV</a>
-            <a href="./documents.html">Dokumenter</a>
-        </div>
+        <!-- Theme toggle (matches main.js) -->
+        <button id="theme-toggle">🌙</button>
+    </div>
+
+</nav>
+
+<!-- SCROLL TO TOP -->
+<button id="scrollTopBtn" class="top-button">↑</button>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-inner">
+
+        <h1>Dokumentarkiv</h1>
+
+        <p>
+            Attester, sertifikater, kursbevis og vitnemål
+        </p>
+
+        <a href="/pages/cv.html" class="btn">← Tilbake til CV</a>
 
     </div>
-</nav>
-<header class="hero">
-
-    <h1>Dokumentarkiv</h1>
-
-    <p class="subtitle">
-        Attester, sertifikater, kursbevis og vitnemål
-    </p>
-
-    <a href="./cv.html" class="btn">
-        ← Tilbake til CV
-    </a>
-
 </header>
 
-<main>
+<!-- CONTENT -->
+<main class="section">
+    <div class="container">
 
-    <section class="container">
         <div class="cards">
 
+            <!-- ATTESTER -->
             <div class="card">
                 <h2>📄 Attester</h2>
                 <ul>
-                    <li><a href="../assets/docs/attester/attest-advania.pdf" target="_blank">Attest - Advania</a></li>
-                    <li><a href="../assets/docs/attester/attest-atea.pdf" target="_blank">Attest - Atea</a></li>
-                    <li><a href="../assets/docs/attester/attest-evry.pdf" target="_blank">Attest - EVRY</a></li>
-                    <li><a href="../assets/docs/attester/attest-nif.pdf" target="_blank">Attest - Norges Idrettsforbund</a></li>
-                    <li><a href="../assets/docs/attester/attest-securitas.pdf" target="_blank">Attest - Securitas</a></li>
+                    <li><a href="/assets/docs/attester/attest-advania.pdf" target="_blank">Advania</a></li>
+                    <li><a href="/assets/docs/attester/attest-atea.pdf" target="_blank">Atea</a></li>
+                    <li><a href="/assets/docs/attester/attest-evry.pdf" target="_blank">EVRY</a></li>
+                    <li><a href="/assets/docs/attester/attest-nif.pdf" target="_blank">Norges Idrettsforbund</a></li>
+                    <li><a href="/assets/docs/attester/attest-securitas.pdf" target="_blank">Securitas</a></li>
                 </ul>
             </div>
 
+            <!-- SERTIFIKATER -->
             <div class="card">
                 <h2>🏅 Sertifikater</h2>
                 <ul>
-                    <li><a href="../assets/docs/sertifikater/ms900.pdf" target="_blank">MS-900 Microsoft 365 Fundamentals</a></li>
+                    <li><a href="/assets/docs/sertifikater/ms900.pdf" target="_blank">MS-900 Microsoft 365 Fundamentals</a></li>
                 </ul>
             </div>
 
+            <!-- KURS -->
             <div class="card">
                 <h2>🎓 Kursbevis</h2>
                 <ul>
-                    <li><a href="../assets/docs/kursbevis/ms900.pdf" target="_blank">Microsoft MS-900 (Udemy)</a></li>
-                    <li><a href="../assets/docs/kursbevis/az900.pdf" target="_blank">Microsoft AZ-900 (Udemy)</a></li>
-                    <li><a href="../assets/docs/kursbevis/O365.pdf" target="_blank">Microsoft 365 Superbruker</a></li>
-                    <li><a href="../assets/docs/kursbevis/hms.pdf" target="_blank">HMS Kurs (Advania)</a></li>
-                    <li><a href="../assets/docs/kursbevis/newpartner.pdf" target="_blank">Delta Firesystems New Partner (Honeywell)</a></li>
-                    <li><a href="../assets/docs/kursbevis/deltaadvanced.pdf" target="_blank">Delta Firesystems Advanced (Honeywell)</a></li>
-                    <li><a href="../assets/docs/kursbevis/flexess.pdf" target="_blank">Esser Flexes Control (Honeywell)</a></li>
-                    <li><a href="../assets/docs/kursbevis/moreley.pdf" target="_blank">Morley Training (Honeywell)</a></li>
+                    <li><a href="/assets/docs/kursbevis/ms900.pdf" target="_blank">MS-900 (Udemy)</a></li>
+                    <li><a href="/assets/docs/kursbevis/az900.pdf" target="_blank">AZ-900 (Udemy)</a></li>
+                    <li><a href="/assets/docs/kursbevis/O365.pdf" target="_blank">Microsoft 365 Superbruker</a></li>
+                    <li><a href="/assets/docs/kursbevis/hms.pdf" target="_blank">HMS Kurs</a></li>
+                    <li><a href="/assets/docs/kursbevis/newpartner.pdf" target="_blank">Delta Firesystems (New Partner)</a></li>
+                    <li><a href="/assets/docs/kursbevis/deltaadvanced.pdf" target="_blank">Delta Firesystems (Advanced)</a></li>
+                    <li><a href="/assets/docs/kursbevis/flexess.pdf" target="_blank">Esser Flexes Control</a></li>
+                    <li><a href="/assets/docs/kursbevis/moreley.pdf" target="_blank">Morley Training</a></li>
                 </ul>
             </div>
 
+            <!-- VITNEMÅL -->
             <div class="card">
                 <h2>📚 Vitnemål</h2>
                 <ul>
-                    <li><a href="../assets/docs/vitnemal/vitnemal.pdf" target="_blank">Vitnemål</a></li>
-                    <li><a href="../assets/docs/vitnemal/karakterutskrift.pdf" target="_blank">Karakterutskrift</a></li>
+                    <li><a href="/assets/docs/vitnemal/vitnemal.pdf" target="_blank">Vitnemål</a></li>
+                    <li><a href="/assets/docs/vitnemal/karakterutskrift.pdf" target="_blank">Karakterutskrift</a></li>
                 </ul>
             </div>
 
         </div>
-    </section>
-
-</main>
-
-<footer class="site-footer">
-    <div class="container">
-
-        <p><strong>RPcloud</strong> – IT-hjelp for privatpersoner og små bedrifter</p>
-
-        <p>📧 service@rpcloud.no</p>
-        <p>📍 Vårveien 29a, 3024 Drammen</p>
-        <p>Org.nr: </p>
-
-        <div class="social-links">
-
-            <a href="https://www.linkedin.com/in/rune-p-1a289059/" target="_blank">
-                <img src="../assets/img/ui/linkedin-icon.png" alt="LinkedIn" class="social-icon">
-            </a>
-
-            <a href="https://vipps.no" target="_blank">
-                <img src="../assets/img/ui/vipps-icon.png" alt="Vipps" class="social-icon">
-            </a>
-
-            <a href="https://facebook.com" target="_blank">
-                <img src="../assets/img/ui/fb-icon.png" alt="Facebook" class="social-icon">
-            </a>
-
-            <a href="https://www.rpcloud.no" target="_blank">
-                <img src="../assets/img/ui/rpcloud-icon.png" alt="RPcloud" class="social-icon">
-            </a>
-
-        </div>
-
-        <p class="copyright">© 2026 RPcloud</p>
 
     </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-icons">
+
+        <a href="https://linkedin.com" target="_blank">
+            <img src="/assets/img/ui/linkedin-icon.png" alt="LinkedIn">
+        </a>
+
+        <a href="https://facebook.com" target="_blank">
+            <img src="/assets/img/ui/fb-icon.png" alt="Facebook">
+        </a>
+
+        <a href="https://vipps.no" target="_blank">
+            <img src="/assets/img/ui/vipps-icon.png" alt="Vipps">
+        </a>
+
+        <a href="https://rpcloud.no" target="_blank">
+            <img src="/assets/img/ui/rpcloud-icon.png" alt="RPcloud">
+        </a>
+
+    </div>
+
+    <p class="footer-copy">© 2026 RPcloud</p>
+
 </footer>
 
-<button onclick="scrollToTop()" class="top-button">
-    ↑ Til toppen
-</button>
-    <!-- JavaScript -->
-    <script src="assets/js/app.js" defer></script>
-    
+<!-- MAIN JS -->
+<script src="/assets/js/main.js" defer></script>
+
 </body>
 </html>

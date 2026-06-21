@@ -2,385 +2,255 @@
 <html lang="no">
 
 <head>
-    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Favicon -->
-     <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
-     <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 
-    <!-- CSS files -->
-    <link rel="stylesheet" href="/assets/css/base.css">
-    <link rel="stylesheet" href="/assets/css/layout.css">
-    <link rel="stylesheet" href="/assets/css/components.css">
-    <link rel="stylesheet" href="/assets/css/ui.css">
-    <link rel="stylesheet" href="/assets/css/cv.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    
     <title>CV - Rune Pedersen</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+
+    <!-- MAIN CSS (your new system) -->
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
 
-<nav class="site-nav">
-    <div class="nav-container">
+<!-- NAVBAR (matches JS + CSS system) -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="/index.html" style="color:white; text-decoration:none;">RPcloud</a>
+    </div>
 
-        <div class="nav-brand">
-            <a href="/index.html">RPcloud</a>
-        </div>
+    <div class="nav-links">
+        <a href="/index.html">Hjem</a>
+        <a href="/pages/cv.html">CV</a>
+        <a href="/pages/documents.html">Dokumenter</a>
 
-        <div class="nav-links">
-            <a href="/index.html">Hjem</a>
-            <a href="/pages/cv.html">CV</a>
-            <a href="/pages/documents.html">Dokumenter</a>
-        </div>
-
+        <!-- Theme toggle (MATCHES main.js) -->
+        <button id="theme-toggle">🌙</button>
     </div>
 </nav>
 
-<button id="darkModeToggle" class="dark-toggle">🌙</button>
+<!-- SCROLL TO TOP BUTTON (MATCHES JS + CSS) -->
+<button id="scrollTopBtn" class="top-button">↑</button>
 
+<!-- HERO -->
 <header class="hero">
+    <div class="hero-inner">
 
-<img src="../assets/img/personal/profile.jpg"
-     alt="Rune André Pedersen"
-     class="profile-image">
+        <img src="/assets/img/personal/profile.jpg"
+             alt="Rune André Pedersen"
+             class="hero-logo">
 
-<h1>Rune André Pedersen</h1>
+        <h1>Rune André Pedersen</h1>
 
-<p>Senior IT Consultant – Microsoft 365, Azure, Intune & Modern Workplace</p>
+        <p>Senior IT Consultant – Microsoft 365, Azure, Intune & Modern Workplace</p>
 
-<div class="badges">
-    <span>Microsoft 365</span>
-    <span>Azure</span>
-    <span>Intune</span>
-    <span>SharePoint</span>
-    <span>Modern Workplace</span>
-</div>
+        <div class="badges">
+            <span>Microsoft 365</span>
+            <span>Azure</span>
+            <span>Intune</span>
+            <span>SharePoint</span>
+            <span>Modern Workplace</span>
+        </div>
 
-<div class="hero-buttons">
-    <a href="mailto:rune@rpcloud.no" class="btn">Kontakt meg</a>
-    <a href="../assets/docs/cv.pdf" class="btn">Last ned CV</a>
-    <a href="https://www.linkedin.com/in/rune-p-1a289059/" class="btn">LinkedIn</a>
-    <a href="https://www.rpcloud.no" class="btn">
-    🏠 Til forsiden
-</a>
-</div>
+        <div class="hero-buttons">
+            <a href="mailto:rune@rpcloud.no" class="btn">Kontakt meg</a>
+            <a href="/assets/docs/cv.pdf" class="btn">Last ned CV</a>
+            <a href="https://www.linkedin.com/in/rune-p-1a289059/" class="btn">LinkedIn</a>
+            <a href="/index.html" class="btn">🏠 Til forsiden</a>
+        </div>
 
+    </div>
 </header>
 
-<section>
-<div class="container">
-
-<h2>Profil</h2>
-
-<div class="card">
-<p>
-Senior IT-konsulent med over 10 års erfaring innen Microsoft 365, Azure, Intune, SharePoint og teknisk support.
-Erfaring fra Honeywell, Norges Idrettsforbund, Advania, Atea og EVRY.
-Fokus på stabile, moderne og effektive IT-løsninger.
-</p>
-</div>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>Kompetanse</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Microsoft 365</h3>
-<p>Administration, Teams, Exchange, SharePoint</p>
-</div>
-
-<div class="card">
-<h3>Azure & Intune</h3>
-<p>Endpoint management, Autopilot, Entra ID</p>
-</div>
-
-<div class="card">
-<h3>Support & Drift</h3>
-<p>Enterprise IT support, troubleshooting, ServiceNow</p>
-</div>
-
-<div class="card">
-<h3>Infrastructure</h3>
-<p>Active Directory, Windows Server, DNS, VMware</p>
-</div>
-
-</div>
-
-</div>
-</section>
-<section>
-<div class="container">
-
-<h2>Arbeidserfaring</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>RPcloud.no</h3>
-<p><strong>Eier</strong></p>
-<p>2026 – d.d.</p>
-</div>
-
-<div class="card">
-<h3>Honeywell Life Safety AS</h3>
-<p><strong>Senior Technical Support Specialist</strong></p>
-<p>2024 – d.d.</p>
-<p>2. linje support innen brann- og sikkerhetssystemer.</p>
-</div>
-
-<div class="card">
-<h3>Advania Norge (Asker)</h3>
-<p><strong>Onsite IT Support Specialist</strong></p>
-<p>2023</p>
-</div>
-
-<div class="card">
-<h3>Norges Idrettsforbund</h3>
-<p><strong>IT-medarbeider (intern IT)</strong></p>
-<p>2017 – 2023</p>
-<p>1. og 2. linje support, Microsoft 365, Azure, SharePoint, Teams, Exchange Online, Intune.</p>
-</div>
-
-<div class="card">
-<h3>Atea Norge</h3>
-<p><strong>Incident Coordinator (Tryg)</strong></p>
-<p>2015 – 2017</p>
-</div>
-
-<div class="card">
-<h3>Atea Norge</h3>
-<p><strong>1. linje IT-support (Tryg Forsikring AS)</strong></p>
-<p>2014 – 2015</p>
-</div>
-
-<div class="card">
-<h3>EVRY</h3>
-<p><strong>IT-medarbeider, Service Desk</strong></p>
-<p>2013 – 2014</p>
-</div>
-
-<div class="card">
-<h3>Steen & Strøm</h3>
-<p><strong>IT drift og support (2. linje)</strong></p>
-<p>2013</p>
-</div>
-
-<div class="card">
-<h3>Fjellinjen AS</h3>
-<p><strong>IT drift og support (2. linje)</strong></p>
-<p>2012 – 2013</p>
-</div>
-
-<div class="card">
-<h3>Securitas</h3>
-<p><strong>Mobil-vekter</strong></p>
-<p>2007 – 2011</p>
-</div>
-
-<div class="card">
-<h3>Security Park</h3>
-<p><strong>Parkerings-vekter</strong></p>
-<p>2007</p>
-</div>
-
-<div class="card">
-<h3>Free Record Shop</h3>
-<p><strong>Butikkmedarbeider (deltid)</strong></p>
-<p>2004 – 2007</p>
-</div>
-
-<div class="card">
-<h3>Bærum Video-senter</h3>
-<p><strong>Butikkmedarbeider (deltid)</strong></p>
-<p>2004 – 2007</p>
-</div>
-
-<div class="card">
-<h3>Arbeidsinstituttet Drammen</h3>
-<p><strong>Ufaglært møbelsnekker</strong></p>
-<p>2002 – 2004</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section>
-  <div class="container">
-
-    <h2>Utdanning og kurs</h2>
-
-    <div class="card">
-      <p><strong>Imente Fagskole, Drammen</strong> (2011 – 2012)</p>
-
-      <ul>
-        <li>70-680 – Windows 7 Configuration</li>
-        <li>70-640 – Windows Server 2008 Active Directory Configuration</li>
-        <li>70-642 – Network Infrastructure Configuration</li>
-        <li>70-643 – Application Infrastructure Configuration</li>
-        <li>70-646 – Windows Server 2008 Administration</li>
-        <li>70-647 – Windows Server 2008 Enterprise Administration</li>
-        <li>70-662 – Microsoft Exchange Server 2010 Configuration</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="container">
-
-    <h2>Andre kurs</h2>
-
-    <div class="card">
-      <ul>
-        <li>MS-900 Microsoft 365 Fundamentals (Udemy, 2023)</li>
-        <li>AZ-900 Microsoft Azure Fundamentals (Udemy, 2023)</li>
-        <li>Microsoft 365 – Fra bruker til Superbruker (Glasspaper, 2019)</li>
-        <li>HMS kurs (Advania / Borregaard, mai 2023)</li>
-        <li>HMS kurs (Securitas AS, 2007)</li>
-        <li>Vekterkurs trinn 1–3 (Securitas AS, 2008)</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>Sertifiseringer</h2>
-
-<div class="card">
-<ul>
-<li>MS-900 Microsoft 365 Fundamentals</li>
-<li>Delta Firesystems Training (Honeywell)</li>
-<li>Delta Firesystems Advanced Training (Honeywell)</li>
-<li>Esser Flexes Control (Honeywell)</li>
-<li>Morley IAS Max Training (Honeywell)</li>
-</ul>
-</div>
-
-</div>
-</section>
-
-<section>
-  <div class="container">
-
-    <h2>Dokumentarkiv</h2>
-
-    <div class="card">
-
-      <p>
-        Attester, kursbevis, sertifikater og vitnemål er tilgjengelig i dokumentarkivet.
-      </p>
-
-      <br>
-
-      <div style="text-align:center;">
-        <a href="/pages/documents.html"
-           class="btn">
-          📁 Åpne dokumentarkiv
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-    
-<section>
-  <div class="container">
-
-    <h2>Språk</h2>
-
-    <div class="card">
-      <ul>
-        <li>Norsk (morsmål)</li>
-        <li>Engelsk (flytende)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
+<!-- PROFILE -->
+<section class="section">
     <div class="container">
 
-        <div class="footer-brand">
-    <strong>Rune André Pedersen</strong> – Senior IT Consultant
-</div>
+        <h2>Profil</h2>
 
-<div class="footer-contact">
-    <p>📧 <a href="mailto:rune@rpcloud.no">rune@rpcloud.no</a></p>
-    <p>📍 Drammen, Norway</p>
-    <p>Org.nr: </p>
-</div>
-
-        <div class="social-links">
-
-    <a href="https://www.linkedin.com/in/rune-p-1a289059/"
-       target="_blank"
-       rel="noopener noreferrer"
-       title="LinkedIn">
-
-        <img src="/assets/img/ui/linkedin-icon.png"
-         alt="LinkedIn"
-         class="social-icon">
-    </a>
-
-    <a href="https://www.facebook.com/profile.php?id=61590900236320"
-       target="_blank"
-       rel="noopener noreferrer"
-       title="Facebook">
-
-        <img src="/assets/img/ui/fb-icon.png"
-         alt="Facebook"
-         class="social-icon">
-
-    </a>
-
-    <a href="https://www.rpcloud.no"
-       target="_blank"
-       rel="noopener noreferrer"
-       title="RPcloud">
-
-        <img src="/assets/img/ui/rpcloud-icon.png"
-         alt="RPcloud"
-         class="social-icon">
-    </a>
-
-    <a href="https://vipps.no"
-       target="_blank"
-       rel="noopener noreferrer"
-       title="Vipps">
-
-        <img src="/assets/img/ui/vipps-icon.png"
-         alt="Vipps"
-         class="social-icon">
-    </a>
-
-</div>
-        <p class="copyright">
-            © 2026 Rune Pedersen
-        </p>
+        <div class="card">
+            <p>
+                Senior IT-konsulent med over 10 års erfaring innen Microsoft 365, Azure, Intune, SharePoint og teknisk support.
+                Erfaring fra Honeywell, Norges Idrettsforbund, Advania, Atea og EVRY.
+                Fokus på stabile, moderne og effektive IT-løsninger.
+            </p>
+        </div>
 
     </div>
-<button onclick="scrollToTop()" class="top-button">
-    ↑ Til toppen
-</button>
+</section>
+
+<!-- COMPETENCE -->
+<section class="section">
+    <div class="container">
+
+        <h2>Kompetanse</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Microsoft 365</h3>
+                <p>Teams, Exchange, SharePoint, administration</p>
+            </div>
+
+            <div class="card">
+                <h3>Azure & Intune</h3>
+                <p>Endpoint management, Autopilot, Entra ID</p>
+            </div>
+
+            <div class="card">
+                <h3>Support & Drift</h3>
+                <p>Enterprise IT support, troubleshooting, ServiceNow</p>
+            </div>
+
+            <div class="card">
+                <h3>Infrastructure</h3>
+                <p>Active Directory, Windows Server, DNS, VMware</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section">
+    <div class="container">
+
+        <h2>Arbeidserfaring</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>RPcloud.no</h3>
+                <p><strong>Eier</strong></p>
+                <p>2026 – d.d.</p>
+            </div>
+
+            <div class="card">
+                <h3>Honeywell Life Safety AS</h3>
+                <p><strong>Senior Technical Support Specialist</strong></p>
+                <p>2024 – d.d.</p>
+                <p>2. linje support innen brann- og sikkerhetssystemer.</p>
+            </div>
+
+            <div class="card">
+                <h3>Advania Norge</h3>
+                <p><strong>Onsite IT Support Specialist</strong></p>
+                <p>2023</p>
+            </div>
+
+            <div class="card">
+                <h3>Norges Idrettsforbund</h3>
+                <p><strong>IT-medarbeider</strong></p>
+                <p>2017 – 2023</p>
+                <p>Microsoft 365, Azure, SharePoint, Teams, Exchange, Intune</p>
+            </div>
+
+            <div class="card">
+                <h3>Atea Norge</h3>
+                <p><strong>Incident Coordinator / IT Support</strong></p>
+                <p>2014 – 2017</p>
+            </div>
+
+            <div class="card">
+                <h3>EVRY</h3>
+                <p><strong>Service Desk</strong></p>
+                <p>2013 – 2014</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section">
+    <div class="container">
+
+        <h2>Utdanning og kurs</h2>
+
+        <div class="card">
+            <p><strong>Imente Fagskole</strong> (2011 – 2012)</p>
+
+            <ul>
+                <li>Windows 7 Configuration</li>
+                <li>Windows Server 2008 Active Directory</li>
+                <li>Network Infrastructure Configuration</li>
+                <li>Exchange Server 2010</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section">
+    <div class="container">
+
+        <h2>Sertifiseringer</h2>
+
+        <div class="card">
+            <ul>
+                <li>MS-900 Microsoft 365 Fundamentals</li>
+                <li>Azure Fundamentals (AZ-900)</li>
+                <li>Honeywell Technical Training</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- LANGUAGES -->
+<section class="section">
+    <div class="container">
+
+        <h2>Språk</h2>
+
+        <div class="card">
+            <ul>
+                <li>Norsk (morsmål)</li>
+                <li>Engelsk (flytende)</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER (matches CSS system) -->
+<footer class="site-footer">
+
+    <div class="footer-icons">
+
+        <a href="https://www.linkedin.com" target="_blank">
+            <img src="/assets/img/ui/linkedin-icon.png" alt="LinkedIn">
+        </a>
+
+        <a href="https://facebook.com" target="_blank">
+            <img src="/assets/img/ui/fb-icon.png" alt="Facebook">
+        </a>
+
+        <a href="https://rpcloud.no" target="_blank">
+            <img src="/assets/img/ui/rpcloud-icon.png" alt="RPcloud">
+        </a>
+
+        <a href="https://vipps.no" target="_blank">
+            <img src="/assets/img/ui/vipps-icon.png" alt="Vipps">
+        </a>
+
+    </div>
+
+    <p class="footer-copy">
+        © 2026 Rune Pedersen
+    </p>
+
 </footer>
-        <!-- JavaScript files -->
-    <script src="assets/js/app.js" defer></script>
-    
+
+<!-- MAIN JS (your system entry point) -->
+<script src="/assets/js/main.js" defer></script>
+
 </body>
 </html>
