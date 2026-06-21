@@ -659,6 +659,10 @@ html {
 .full-width {
     width: 100%;
 }
+/* ================================
+   LINKS (DARK MODE FIX)
+================================ */
+
 a {
     color: var(--accent);
     text-decoration: none;
@@ -679,4 +683,31 @@ a:hover {
 
 [data-theme="dark"] a {
     color: #7ab8ff;
+}
+/* ================================
+   DOCUMENT PAGE SPACING FIX
+================================ */
+
+.hero {
+    padding-bottom: 1.5rem; /* reduces large gap under header */
+}
+
+.hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    margin-bottom: 0;
+}
+
+/* tighten first section spacing */
+section.container {
+    margin-top: 0;
+    padding-top: 1rem;
+}
+
+/* remove default h2 huge spacing */
+h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
