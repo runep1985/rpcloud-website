@@ -527,3 +527,135 @@ html {
 .section {
     padding: 3rem 0; /* reduced from 6rem */
 }
+
+
+/* =========================================
+   FOOTER
+   - Contains social icons + copyright text
+========================================= */
+
+.site-footer {
+    text-align: center;     /* centers all footer content */
+    padding: 30px 20px;     /* space inside footer */
+    margin-top: 60px;       /* space above footer */
+}
+
+
+/* =========================================
+   FOOTER ICON ROW
+   - Controls layout of social media icons
+========================================= */
+
+.footer-icons {
+    display: flex;              /* horizontal layout */
+    justify-content: center;    /* center icons horizontally */
+    gap: 20px;                  /* spacing between icons */
+    margin-bottom: 15px;        /* space below icons */
+}
+
+
+/* =========================================
+   FOOTER ICON IMAGES
+   - Social media logos (LinkedIn, Facebook, Vipps)
+========================================= */
+
+.footer-icons img {
+    height: 40px;              /* uniform icon size */
+    width: 40px;               /* keeps aspect ratio */
+    transition: transform 0.2s ease; /* smooth hover effect */
+}
+
+
+/* Hover effect for icons */
+.footer-icons img:hover {
+    transform: scale(1.1);     /* slight zoom on hover */
+}
+
+
+/* =========================================
+   FOOTER COPYRIGHT TEXT
+========================================= */
+
+.footer-copy {
+    font-size: 14px;           /* small text size */
+    color: #777;               /* muted gray color */
+}
+/* =========================================
+   CONTACT MODAL FINAL MODERN FIX
+   - Fixes layout issues seen in popup
+   - Forces clean vertical stacking
+   - Makes form look modern + aligned
+========================================= */
+
+/* Ensure modal centers properly */
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modern card container (your redesign class) */
+.contact-modal {
+    width: 100%;
+    max-width: 420px;
+
+    background: var(--card);
+    backdrop-filter: var(--blur);
+
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+
+    padding: 2rem;
+
+    box-shadow: var(--shadow);
+}
+
+/* Force vertical form layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Fix label spacing (prevents inline look) */
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+/* CRITICAL FIX: inputs were not full width */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    display: block;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+    border: 1px solid var(--border);
+
+    background: rgba(255,255,255,0.8);
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    outline: none;
+}
+
+/* Focus state (keeps your design system accent) */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0,102,255,0.15);
+}
+
+/* Textarea height consistency */
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Button alignment */
+.full-width {
+    width: 100%;
+}
