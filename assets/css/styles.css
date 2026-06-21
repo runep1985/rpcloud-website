@@ -683,3 +683,11 @@ a:hover {
 [data-theme="dark"] a {
     color: #7ab8ff;
 }
+/* ================================
+   DOCS PAGE HERO FIX (ONLY THIS PAGE)
+================================ */
+
+.docs-page .hero {
+    min-height: auto;
+    padding: 2rem 2rem 1rem 2rem;
+}
