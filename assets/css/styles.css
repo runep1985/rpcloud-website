@@ -683,36 +683,3 @@ a:hover {
 [data-theme="dark"] a {
     color: #7ab8ff;
 }
-/* ================================
-   DOCUMENT PAGE SPACING HARD FIX
-================================ */
-
-/* Remove default browser heading margins in hero */
-.hero h1 {
-    margin: 0;
-}
-
-.hero p {
-    margin: 0.5rem 0 0 0;
-}
-
-/* Reduce hero padding ONLY on sub pages */
-body .hero {
-    padding: 2rem 2rem 1rem 2rem;
-}
-
-/* Kill extra spacing between hero and first section */
-.hero + section {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-/* Remove accidental container push-down */
-section .container {
-    padding-top: 0;
-}
-
-/* Normalize section spacing globally */
-section {
-    padding: 1.5rem 0;
-}
