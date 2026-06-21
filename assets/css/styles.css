@@ -659,3 +659,24 @@ html {
 .full-width {
     width: 100%;
 }
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure links stay readable in dark mode cards */
+.card a {
+    color: var(--accent);
+}
+
+[data-theme="dark"] .card a {
+    color: #7ab8ff; /* slightly brighter for dark bg */
+}
+
+[data-theme="dark"] a {
+    color: #7ab8ff;
+}
