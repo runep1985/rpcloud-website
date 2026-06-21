@@ -662,7 +662,6 @@ html {
 /* ================================
    LINKS (DARK MODE FIX)
 ================================ */
-
 a {
     color: var(--accent);
     text-decoration: none;
