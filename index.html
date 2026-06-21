@@ -1,69 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- =========================================
+        META + PAGE SETTINGS
+    ========================================= -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RPcloud | Cloud & Infrastructure</title>
+    <title>RPcloud.no | IT-hjelp for privatpersoner og små bedrifter</title>
 
     <link rel="icon" href="assets/favicon/favicon.png">
 
     <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
+
 <body>
+
+    <!-- =========================================
+        NAVBAR
+    ========================================= -->
 
     <header class="navbar">
 
-        <div class="logo">
-            RPcloud
-        </div>
+        <div class="logo">RPcloud.no</div>
 
-        <nav>
+        <nav class="nav-links">
             <a href="#about">About</a>
             <a href="pages/cv.html">CV</a>
             <a href="pages/documents.html">Documents</a>
         </nav>
 
-        <button id="theme-toggle">
-            🌙
-        </button>
+        <button id="theme-toggle">🌙</button>
 
     </header>
 
-    <section class="hero">
 
-        <h1>Cloud. Infrastructure. Microsoft 365.</h1>
+    <!-- =========================================
+        HERO SECTION
+    ========================================= -->
 
-        <p>
-            IT Consultant with experience in Azure,
-            Microsoft 365, Endpoint Management and Infrastructure.
-        </p>
+    <header class="hero">
 
-        <div class="hero-buttons">
+        <div class="hero-inner container">
 
-            <a href="pages/cv.html" class="btn">
-                View CV
-            </a>
+            <div class="logo-wrap">
+                <img src="assets/img/branding/RPcloud_Blue_Trans.png"
+                     alt="RPcloud Logo"
+                     class="hero-logo">
+            </div>
 
-            <a href="pages/documents.html" class="btn secondary">
-                Documents
-            </a>
+            <h1>IT-hjelp for privatpersoner og små bedrifter</h1>
+
+            <p class="hero-subtitle">
+                Profesjonell IT-hjelp hjemme hos deg eller via fjernsupport.
+            </p>
+
+            <div class="badges">
+                <span>Windows</span>
+                <span>Mac</span>
+                <span>Linux</span>
+                <span>Mobil</span>
+                <span>Nettverk</span>
+                <span>Skylagring</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+        ABOUT SECTION (UPDATED)
+    ========================================= -->
+
+    <section id="about" class="section container">
+
+        <h2>Velkommen til RPcloud</h2>
+
+        <div class="about">
+
+            <p>
+                Har du problemer med PC-en, skriveren, internett eller mobilen?
+                Trenger du hjelp med oppsett av e-post, skylagring eller sikkerhetskopiering?
+            </p>
+
+            <br>
+
+            <p>
+                RPcloud tilbyr rask, rimelig og personlig IT-hjelp – enten hjemme hos deg eller via fjernsupport.
+            </p>
+
+            <br>
+
+
+            <p>
+                Med over <strong>30 års erfaring som entusiast innen IT</strong> og
+                <strong>15 års erfaring som konsulent for noen av Norges største IT-firmaer</strong>,
+                kan du være trygg på at du får profesjonell hjelp til både små og store utfordringer.
+            </p>
 
         </div>
 
     </section>
 
-    <button id="scrollTopBtn">
-        ↑
-    </button>
 
-    <button id="contactBtn">
-        Contact
-    </button>
+    <!-- =========================================
+        SERVICES SECTION
+    ========================================= -->
+
+    <section class="section container">
+
+        <h2>Tjenester</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>PC, Mac og mobil</h3>
+                <ul>
+                    <li>Windows, macOS og Linux</li>
+                    <li>Mobil og nettbrett</li>
+                    <li>Oppsett av nye enheter</li>
+                    <li>Feilsøking</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Microsoft 365</h3>
+                <ul>
+                    <li>Outlook</li>
+                    <li>Teams</li>
+                    <li>OneDrive</li>
+                    <li>Office installasjon</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Skylagring</h3>
+                <ul>
+                    <li>OneDrive</li>
+                    <li>Google Drive</li>
+                    <li>Dropbox</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Nettverk</h3>
+                <ul>
+                    <li>WiFi-problemer</li>
+                    <li>Routeroppsett</li>
+                    <li>Sikkerhet</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Sikkerhetskopiering</h3>
+                <ul>
+                    <li>PC og Mac</li>
+                    <li>Skylagring</li>
+                    <li>Eksterne harddisker</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Fjernsupport</h3>
+                <ul>
+                    <li>Quick Assist</li>
+                    <li>TeamViewer</li>
+                    <li>Rask og enkel hjelp</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+        PRICING SECTION
+    ========================================= -->
+
+    <section class="section container">
+
+        <h2>Priser</h2>
+
+        <div class="price-grid">
+
+            <div class="price-box">
+                <h3>Fjernsupport</h3>
+                <div class="price">kr 199,-</div>
+                <p>Per time</p>
+                <p>Minimumspris kr 199,-</p>
+                <p>Quick Assist eller TeamViewer</p>
+            </div>
+
+            <div class="price-box">
+                <h3>Hjemmebesøk</h3>
+                <div class="price">kr 399,-</div>
+                <p>Per time</p>
+                <p>Minimumspris kr 399,-</p>
+                <p>Drammen og omegn</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+        IMAGE / PROMO SECTION
+    ========================================= -->
+
+    <section class="section container center">
+
+        <img src="assets/img/ui/rpcloud-add01.png"
+             class="gallery-image"
+             alt="Promo 1">
+
+        <img src="assets/img/ui/rpcloud-add02.png"
+             class="gallery-image"
+             alt="Promo 2">
+
+    </section>
+
+
+    <!-- =========================================
+        FLOATING BUTTONS
+    ========================================= -->
+
+    <button id="scrollTopBtn">↑</button>
+
+    <button id="contactBtn">Contact</button>
+
+
+    <!-- =========================================
+        CONTACT MODAL
+    ========================================= -->
+
+    <div id="contact-modal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Contact Me</h2>
+
+            <form action="https://formspree.io/f/xnjylrqz" method="POST">
+
+                <label>
+                    Name
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" required>
+                </label>
+
+                <label>
+                    Message
+                    <textarea name="message" required></textarea>
+                </label>
+
+                <input type="hidden" name="_subject" value="New message from RPcloud.no">
+
+                <button type="submit" class="btn">Send</button>
+
+            </form>
+
+            <button id="close-modal" class="btn secondary">Close</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+        JS ENTRY
+    ========================================= -->
 
     <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
