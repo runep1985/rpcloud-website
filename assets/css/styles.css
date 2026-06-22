@@ -701,3 +701,7 @@ a:hover {
     min-height: auto;
     padding: 2rem 2rem 1rem 2rem;
 }
+.btn {
+    color: #fff !important;
+    font-weight: 700;
+}
