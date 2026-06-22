@@ -993,3 +993,9 @@ img {
         padding: 0 1rem;
     }
 }
+
+@media (max-width: 768px) {
+    .hero-logo {
+        max-width: 280px;
+    }
+}
