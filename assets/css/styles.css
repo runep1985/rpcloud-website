@@ -775,3 +775,73 @@ a:hover {
 .cv-item:hover {
     transform: translateY(-5px);
 }
+/* =========================================
+   BUTTON FIX (GLOBAL SAFETY)
+========================================= */
+
+.btn {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Ensure strong text inside buttons stays white */
+.btn strong {
+    color: #fff;
+}
+
+
+/* =========================================
+   CV DOCUMENT CARD
+========================================= */
+
+.cv-doc-card {
+    text-align: center;
+}
+
+.cv-doc-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   CV MODAL
+========================================= */
+
+#cv-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#cv-modal.active {
+    display: flex;
+}
+
+#cv-modal .modal-content {
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================
+   CV CARDS INTERACTION
+========================================= */
+
+.cv-item {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cv-item:hover {
+    transform: translateY(-5px);
+}

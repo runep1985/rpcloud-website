@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     initDarkMode();
     initScrollTop();
     initNavbarScrollEffect();
-    initContactModal(); // ✅ FIXED: was missing
-    initLightbox();      // ✅ NEW: image system
+    initContactModal();
+    initLightbox();
+    initCVModal();
 });
 
 
@@ -69,8 +70,7 @@ function initNavbarScrollEffect() {
 
 
 // =========================================
-// CONTACT MODAL (FIXED)
-// Uses class toggle instead of inline styles
+// CONTACT MODAL
 // =========================================
 function initContactModal() {
 
@@ -97,12 +97,13 @@ function initContactModal() {
 
 
 // =========================================
-// LIGHTBOX SYSTEM (NEW)
-// Click image → fullscreen preview
+// LIGHTBOX
 // =========================================
 function initLightbox() {
 
     const images = document.querySelectorAll(".gallery-image");
+    if (!images.length) return;
+
     const modal = createLightbox();
 
     images.forEach(img => {
@@ -113,8 +114,6 @@ function initLightbox() {
     });
 }
 
-
-// Creates lightbox DOM once
 function createLightbox() {
 
     const wrapper = document.createElement("div");
@@ -132,21 +131,27 @@ function createLightbox() {
     return { wrapper, img };
 }
 
+
+// =========================================
+// CV MODAL SYSTEM
+// =========================================
 function initCVModal() {
 
     const modal = document.getElementById("cv-modal");
     const title = document.getElementById("cv-modal-title");
     const text = document.getElementById("cv-modal-text");
     const closeBtn = document.getElementById("cv-modal-close");
-
-    if (!modal || !title || !text || !closeBtn) return;
-
     const items = document.querySelectorAll(".cv-item");
 
+    if (!modal || !title || !text || !closeBtn || !items.length) return;
+
     items.forEach(item => {
+
         item.addEventListener("click", () => {
+
             title.textContent = item.dataset.title || "";
             text.textContent = item.dataset.text || "";
+
             modal.classList.add("active");
         });
     });
