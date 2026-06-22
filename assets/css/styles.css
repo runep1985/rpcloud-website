@@ -209,6 +209,16 @@ body {
     100% { transform: translateY(0); }
 }
 
+/* PROFILE IMAGE - circular + centered */
+.profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: var(--shadow);
+}
 
 /* =========================================
    SECTION TITLE FIX (IMPORTANT)
