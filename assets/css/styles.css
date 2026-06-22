@@ -180,8 +180,8 @@ body {
 ========================================= */
 
 .hero-logo {
-    width: 800px;
-    max-width: 600%;
+    width: 100%;
+    max-width: 520px;
     height: auto;
 
     padding: 1rem;
@@ -944,5 +944,52 @@ a:hover {
     .profile-image {
         width: 120px;
         height: 120px;
+    }
+}
+/* ================================
+   RESPONSIVE FIXES (MOBILE)
+================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HERO logo scaling fix */
+.hero-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent hero text overflow */
+.hero h1 {
+    word-break: break-word;
+}
+
+/* Better padding on small screens */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        padding: 0 1rem;
     }
 }
