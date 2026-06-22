@@ -705,3 +705,73 @@ a:hover {
     color: #fff !important;
     font-weight: 700;
 }
+/* CV MODAL + CLICKABLE ITEMS */
+.cv-item {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cv-item:hover {
+    transform: translateY(-5px);
+}
+
+/* center document CTA */
+.cv-doc-card {
+    text-align: center;
+}
+/* ================================
+   CV DOCUMENT CTA FIX
+================================ */
+
+.cv-doc-card {
+    text-align: center;
+}
+
+/* Center button properly */
+.cv-doc-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Force button text ALWAYS white */
+.cv-doc-card .btn,
+.cv-doc-card .btn strong {
+    color: #fff !important;
+    font-weight: 700;
+}
+
+/* ================================
+   CV MODAL ENHANCED STYLING
+================================ */
+
+#cv-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#cv-modal.active {
+    display: flex;
+}
+
+#cv-modal .modal-content {
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 500px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.cv-item {
+    cursor: pointer;
+}
+
+.cv-item:hover {
+    transform: translateY(-5px);
+}

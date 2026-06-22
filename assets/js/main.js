@@ -131,3 +131,33 @@ function createLightbox() {
 
     return { wrapper, img };
 }
+
+function initCVModal() {
+
+    const modal = document.getElementById("cv-modal");
+    const title = document.getElementById("cv-modal-title");
+    const text = document.getElementById("cv-modal-text");
+    const closeBtn = document.getElementById("cv-modal-close");
+
+    if (!modal || !title || !text || !closeBtn) return;
+
+    const items = document.querySelectorAll(".cv-item");
+
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            title.textContent = item.dataset.title || "";
+            text.textContent = item.dataset.text || "";
+            modal.classList.add("active");
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+}
