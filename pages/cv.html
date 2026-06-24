@@ -425,6 +425,41 @@ Jeg har vært involvert i prosjektet fra overlevering fra Atea i 2018 og frem ti
 <!-- CONTACT -->
 <button id="contactBtn">Kontakt meg</button>
 
+<div id="contact-modal" class="modal">
+
+    <div class="modal-content contact-modal">
+
+        <h2>Kontakt meg</h2>
+
+        <form class="contact-form" action="https://formspree.io/f/mlgygzgq" method="POST">
+
+                <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" required>
+                </div>
+
+                <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" required></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="New message from RPcloud.no">
+
+                <button type="submit" class="btn full-width">Send</button>
+
+            </form>
+
+            <button id="close-modal" class="btn secondary">Close</button>
+
+        </div>
+
+    </div>
+
 <!-- FOOTER -->
 <footer class="site-footer">
 
