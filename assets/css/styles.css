@@ -999,3 +999,6 @@ img {
         max-width: 280px;
     }
 }
+#modalText {
+    white-space: pre-line;
+}
