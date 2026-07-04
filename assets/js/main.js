@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initCVModal();
 });
 
-
 // =========================================
 // DARK MODE SYSTEM
 // =========================================
@@ -36,7 +35,6 @@ function initDarkMode() {
     });
 }
 
-
 // =========================================
 // SCROLL TO TOP
 // =========================================
@@ -54,7 +52,6 @@ function initScrollTop() {
     });
 }
 
-
 // =========================================
 // NAVBAR SCROLL EFFECT
 // =========================================
@@ -67,7 +64,6 @@ function initNavbarScrollEffect() {
         navbar.classList.toggle("scrolled", window.scrollY > 10);
     });
 }
-
 
 // =========================================
 // CONTACT MODAL
@@ -94,7 +90,6 @@ function initContactModal() {
         }
     });
 }
-
 
 // =========================================
 // LIGHTBOX
@@ -130,7 +125,6 @@ function createLightbox() {
 
     return { wrapper, img };
 }
-
 
 // =========================================
 // CV MODAL SYSTEM
